@@ -1,0 +1,2441 @@
+{
+  "version": "1.0-demo",
+  "status": "Simulación. Contenido y enlaces pendientes de validación institucional.",
+  "conditions": [
+    {
+      "id": "c1",
+      "label": "Síndrome coronario agudo / IAM",
+      "findings": [
+        "dolor torácico",
+        "irradiación a brazo/mandíbula/espalda",
+        "disnea",
+        "diaforesis",
+        "náuseas",
+        "palidez",
+        "taquicardia",
+        "hipotensión",
+        "fatiga",
+        "ansiedad",
+        "cambios electrocardiográficos"
+      ],
+      "diagnoses": [
+        {
+          "id": "c1-d1",
+          "label": "Dolor agudo",
+          "type": "actual",
+          "proposedFactor": "agente lesivo fisiológico secundario a isquemia miocárdica",
+          "evidenceOptions": [
+            "Dolor referido por la persona",
+            "Expresión facial de dolor observada"
+          ],
+          "noc": [
+            "Nivel del dolor",
+            "Control del dolor"
+          ],
+          "nic": [
+            "Manejo del dolor",
+            "Administración de medicamentos",
+            "Vigilancia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c1-d2",
+          "label": "Disminución del gasto cardíaco",
+          "type": "actual",
+          "proposedFactor": "alteración de la contractilidad miocárdica",
+          "evidenceOptions": [
+            "Fatiga",
+            "Taquicardia",
+            "Hipotensión",
+            "Oliguria",
+            "Disnea"
+          ],
+          "noc": [
+            "Efectividad de la bomba cardíaca",
+            "Estado cardiovascular"
+          ],
+          "nic": [
+            "Cuidados cardíacos agudos",
+            "Monitorización cardíaca",
+            "Monitorización hemodinámica"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c1-d3",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "desequilibrio entre aporte y demanda de oxígeno",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad",
+            "Resistencia"
+          ],
+          "nic": [
+            "Manejo de la energía",
+            "Manejo de la actividad",
+            "Movilización progresiva"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c1-d4",
+          "label": "Ansiedad",
+          "type": "actual",
+          "proposedFactor": "amenaza percibida al estado de salud",
+          "evidenceOptions": [
+            "Preocupación expresada por la persona",
+            "Inquietud observada",
+            "Dificultad de concentración referida"
+          ],
+          "noc": [
+            "Nivel de ansiedad",
+            "Autocontrol de la ansiedad"
+          ],
+          "nic": [
+            "Disminución de la ansiedad",
+            "Apoyo emocional",
+            "Información preparatoria"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c1-d5",
+          "label": "Autogestión ineficaz de la salud",
+          "type": "actual",
+          "proposedFactor": "complejidad del régimen terapéutico",
+          "evidenceOptions": [
+            "Dificultad referida para integrar el tratamiento a la vida diaria",
+            "Dificultad referida para seguir el régimen acordado"
+          ],
+          "noc": [
+            "Autocontrol de la enfermedad cardíaca",
+            "Conocimiento del régimen terapéutico"
+          ],
+          "nic": [
+            "Enseñanza: proceso de enfermedad",
+            "Enseñanza: medicamentos",
+            "Planificación del alta"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "label": "Insuficiencia cardiaca descompensada",
+      "findings": [
+        "disnea",
+        "ortopnea",
+        "disnea paroxística nocturna",
+        "edema periférico",
+        "crépitos",
+        "ingurgitación yugular",
+        "ganancia de peso",
+        "oliguria",
+        "taquicardia",
+        "fatiga",
+        "hipoxemia"
+      ],
+      "diagnoses": [
+        {
+          "id": "c2-d1",
+          "label": "Disminución del gasto cardíaco",
+          "type": "actual",
+          "proposedFactor": "alteración de la contractilidad cardíaca",
+          "evidenceOptions": [
+            "Fatiga",
+            "Taquicardia",
+            "Hipotensión",
+            "Oliguria",
+            "Disnea"
+          ],
+          "noc": [
+            "Efectividad de la bomba cardíaca",
+            "Estado cardiovascular"
+          ],
+          "nic": [
+            "Cuidados cardíacos",
+            "Monitorización cardíaca",
+            "Vigilancia hemodinámica"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c2-d2",
+          "label": "Exceso de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "compromiso de los mecanismos reguladores",
+          "evidenceOptions": [
+            "Edema periférico",
+            "Ganancia de peso",
+            "Ortopnea",
+            "Disnea",
+            "Crépitos"
+          ],
+          "noc": [
+            "Equilibrio hídrico",
+            "Severidad del edema"
+          ],
+          "nic": [
+            "Manejo de líquidos",
+            "Monitorización de líquidos",
+            "Control del peso"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c2-d3",
+          "label": "Deterioro del intercambio gaseoso",
+          "type": "actual",
+          "proposedFactor": "alteración de la relación ventilación/perfusión",
+          "evidenceOptions": [
+            "Hipoxemia documentada",
+            "Disnea",
+            "Alteración gasométrica documentada"
+          ],
+          "noc": [
+            "Estado respiratorio: intercambio gaseoso",
+            "Saturación de oxígeno"
+          ],
+          "nic": [
+            "Oxigenoterapia",
+            "Monitorización respiratoria",
+            "Posicionamiento"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c2-d4",
+          "label": "Patrón respiratorio ineficaz",
+          "type": "actual",
+          "proposedFactor": "aumento del trabajo respiratorio",
+          "evidenceOptions": [
+            "Taquipnea",
+            "Uso de músculos accesorios",
+            "Disnea",
+            "Alteración de la profundidad respiratoria"
+          ],
+          "noc": [
+            "Estado respiratorio: ventilación"
+          ],
+          "nic": [
+            "Monitorización respiratoria",
+            "Posicionamiento",
+            "Manejo de las vías aéreas"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c2-d5",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "desequilibrio entre aporte y demanda de oxígeno",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad"
+          ],
+          "nic": [
+            "Manejo de la energía",
+            "Ayuda con el autocuidado",
+            "Actividad progresiva"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "label": "Crisis hipertensiva",
+      "findings": [
+        "presión arterial marcadamente elevada",
+        "cefalea",
+        "mareo",
+        "alteraciones visuales",
+        "náuseas",
+        "dolor torácico",
+        "disnea",
+        "epistaxis",
+        "déficit neurológico",
+        "ansiedad"
+      ],
+      "diagnoses": [
+        {
+          "id": "c3-d1",
+          "label": "Dolor agudo",
+          "type": "actual",
+          "proposedFactor": "agente fisiológico vascular",
+          "evidenceOptions": [
+            "Dolor referido por la persona",
+            "Expresión facial de dolor observada"
+          ],
+          "noc": [
+            "Nivel del dolor"
+          ],
+          "nic": [
+            "Manejo del dolor",
+            "Vigilancia",
+            "Administración de medicamentos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c3-d2",
+          "label": "Ansiedad",
+          "type": "actual",
+          "proposedFactor": "amenaza percibida al estado de salud",
+          "evidenceOptions": [
+            "Preocupación expresada por la persona",
+            "Inquietud observada",
+            "Dificultad de concentración referida"
+          ],
+          "noc": [
+            "Nivel de ansiedad"
+          ],
+          "nic": [
+            "Disminución de la ansiedad",
+            "Apoyo emocional"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c3-d3",
+          "label": "Autogestión ineficaz de la salud",
+          "type": "actual",
+          "proposedFactor": "complejidad del tratamiento/adhesión insuficiente",
+          "evidenceOptions": [
+            "Dificultad referida para integrar el tratamiento a la vida diaria",
+            "Dificultad referida para seguir el régimen acordado"
+          ],
+          "noc": [
+            "Conducta de cumplimiento",
+            "Autocontrol de la hipertensión"
+          ],
+          "nic": [
+            "Educación sanitaria",
+            "Enseñanza de medicamentos",
+            "Facilitar la autorresponsabilidad"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c3-d4",
+          "label": "Exceso de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "alteración de mecanismos reguladores",
+          "evidenceOptions": [
+            "Edema periférico",
+            "Ganancia de peso",
+            "Ortopnea",
+            "Disnea",
+            "Crépitos"
+          ],
+          "noc": [
+            "Equilibrio hídrico"
+          ],
+          "nic": [
+            "Manejo de líquidos",
+            "Control de peso",
+            "Monitorización de electrolitos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c3-d5",
+          "label": "Riesgo de perfusión tisular cerebral ineficaz",
+          "type": "risk",
+          "proposedFactor": "elevación severa de la presión arterial",
+          "evidenceOptions": [],
+          "noc": [
+            "Perfusión tisular cerebral",
+            "Estado neurológico"
+          ],
+          "nic": [
+            "Monitorización neurológica",
+            "Monitorización de signos vitales",
+            "Manejo de la presión arterial"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "label": "Accidente cerebrovascular",
+      "findings": [
+        "hemiparesia",
+        "hemiplejia",
+        "asimetría facial",
+        "disartria",
+        "afasia",
+        "disfagia",
+        "alteración de conciencia",
+        "pérdida sensitiva",
+        "ataxia",
+        "alteración visual"
+      ],
+      "diagnoses": [
+        {
+          "id": "c4-d1",
+          "label": "Deterioro de la movilidad física",
+          "type": "actual",
+          "proposedFactor": "alteración neuromuscular",
+          "evidenceOptions": [
+            "Hemiparesia derecha",
+            "Hemiparesia izquierda",
+            "Disminución de fuerza muscular",
+            "Dificultad para la marcha",
+            "Necesidad de asistencia para movilización"
+          ],
+          "noc": [
+            "Movilidad",
+            "Consecuencias de la inmovilidad",
+            "Deambulación",
+            "Consecuencias fisiológicas de la inmovilidad"
+          ],
+          "nic": [
+            "Cambio de posición",
+            "Terapia de ejercicios",
+            "Prevención de complicaciones",
+            "Terapia de ejercicios: movilidad articular",
+            "Ayuda en la deambulación",
+            "Prevención de caídas",
+            "Cuidados del paciente encamado"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c4-d2",
+          "label": "Deterioro de la comunicación verbal",
+          "type": "actual",
+          "proposedFactor": "alteración neurológica",
+          "evidenceOptions": [
+            "Afasia",
+            "Disartria",
+            "Dificultad para expresar necesidades"
+          ],
+          "noc": [
+            "Comunicación: expresión",
+            "Comunicación: recepción"
+          ],
+          "nic": [
+            "Mejora de la comunicación",
+            "Escucha activa"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c4-d3",
+          "label": "Deterioro de la deglución",
+          "type": "actual",
+          "proposedFactor": "déficit neuromuscular",
+          "evidenceOptions": [
+            "Disfagia documentada",
+            "Dificultad observada para deglutir",
+            "Tos durante la deglución observada"
+          ],
+          "noc": [
+            "Estado de la deglución"
+          ],
+          "nic": [
+            "Terapia de deglución",
+            "Precauciones para evitar aspiración",
+            "Manejo de la alimentación"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c4-d4",
+          "label": "Déficit de autocuidado",
+          "type": "actual",
+          "proposedFactor": "deterioro neuromuscular",
+          "evidenceOptions": [
+            "Necesidad de ayuda para el aseo",
+            "Necesidad de ayuda para vestirse",
+            "Necesidad de ayuda para la alimentación"
+          ],
+          "noc": [
+            "Autocuidados: actividades de la vida diaria"
+          ],
+          "nic": [
+            "Ayuda con el autocuidado",
+            "Fomento de la independencia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c4-d5",
+          "label": "Confusión aguda",
+          "type": "actual",
+          "proposedFactor": "alteración neurológica aguda",
+          "evidenceOptions": [
+            "Desorientación observada",
+            "Alteración aguda de la atención",
+            "Fluctuación del nivel de conciencia"
+          ],
+          "noc": [
+            "Estado neurológico: conciencia",
+            "Orientación cognitiva"
+          ],
+          "nic": [
+            "Monitorización neurológica",
+            "Manejo de la confusión",
+            "Orientación de la realidad"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "label": "Diabetes mellitus tipo 2 descompensada",
+      "findings": [
+        "hiperglucemia",
+        "poliuria",
+        "polidipsia",
+        "mucosas secas",
+        "deshidratación",
+        "taquicardia",
+        "debilidad",
+        "náuseas",
+        "alteración del nivel de conciencia",
+        "pérdida de peso"
+      ],
+      "diagnoses": [
+        {
+          "id": "c5-d1",
+          "label": "Déficit de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "diuresis osmótica",
+          "evidenceOptions": [
+            "Mucosas secas",
+            "Taquicardia",
+            "Hipotensión",
+            "Disminución de la diuresis"
+          ],
+          "noc": [
+            "Hidratación",
+            "Equilibrio hídrico"
+          ],
+          "nic": [
+            "Manejo de líquidos",
+            "Monitorización de líquidos",
+            "Terapia intravenosa"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c5-d2",
+          "label": "Autogestión ineficaz de la salud",
+          "type": "actual",
+          "proposedFactor": "complejidad del régimen terapéutico",
+          "evidenceOptions": [
+            "Dificultad referida para integrar el tratamiento a la vida diaria",
+            "Dificultad referida para seguir el régimen acordado"
+          ],
+          "noc": [
+            "Autocontrol de la diabetes",
+            "Adherencia al tratamiento"
+          ],
+          "nic": [
+            "Enseñanza: diabetes",
+            "Enseñanza de medicamentos",
+            "Educación nutricional"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c5-d3",
+          "label": "Fatiga",
+          "type": "actual",
+          "proposedFactor": "alteración metabólica",
+          "evidenceOptions": [
+            "Cansancio persistente referido",
+            "Debilidad referida",
+            "Dificultad para mantener las actividades habituales"
+          ],
+          "noc": [
+            "Nivel de fatiga",
+            "Resistencia"
+          ],
+          "nic": [
+            "Manejo de la energía",
+            "Manejo nutricional"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c5-d4",
+          "label": "Confusión aguda",
+          "type": "actual",
+          "proposedFactor": "alteraciones metabólicas",
+          "evidenceOptions": [
+            "Desorientación observada",
+            "Alteración aguda de la atención",
+            "Fluctuación del nivel de conciencia"
+          ],
+          "noc": [
+            "Estado neurológico",
+            "Orientación cognitiva"
+          ],
+          "nic": [
+            "Monitorización neurológica",
+            "Manejo de la hiperglucemia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c5-d5",
+          "label": "Riesgo de nivel de glucemia inestable",
+          "type": "risk",
+          "proposedFactor": "alteración del metabolismo de la glucosa/tratamiento",
+          "evidenceOptions": [],
+          "noc": [
+            "Nivel de glucemia",
+            "Autocontrol de la diabetes"
+          ],
+          "nic": [
+            "Monitorización de glucosa",
+            "Manejo de la hiperglucemia/hipoglucemia",
+            "Educación diabetológica"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "label": "EPOC exacerbada",
+      "findings": [
+        "disnea",
+        "hipoxemia",
+        "tos",
+        "expectoración",
+        "sibilancias",
+        "uso de músculos accesorios",
+        "taquipnea",
+        "cianosis",
+        "fatiga",
+        "disminución del murmullo vesicular"
+      ],
+      "diagnoses": [
+        {
+          "id": "c6-d1",
+          "label": "Deterioro del intercambio gaseoso",
+          "type": "actual",
+          "proposedFactor": "desequilibrio ventilación/perfusión",
+          "evidenceOptions": [
+            "Hipoxemia documentada",
+            "Disnea",
+            "Alteración gasométrica documentada"
+          ],
+          "noc": [
+            "Intercambio gaseoso"
+          ],
+          "nic": [
+            "Oxigenoterapia",
+            "Monitorización respiratoria",
+            "Gasometría/oximetría"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c6-d2",
+          "label": "Limpieza ineficaz de las vías aéreas",
+          "type": "actual",
+          "proposedFactor": "aumento de secreciones",
+          "evidenceOptions": [
+            "Tos ineficaz observada",
+            "Dificultad para eliminar secreciones",
+            "Ruidos respiratorios adventicios"
+          ],
+          "noc": [
+            "Permeabilidad de las vías respiratorias"
+          ],
+          "nic": [
+            "Manejo de vías aéreas",
+            "Fomento de la tos",
+            "Fisioterapia respiratoria"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c6-d3",
+          "label": "Patrón respiratorio ineficaz",
+          "type": "actual",
+          "proposedFactor": "aumento de resistencia de las vías respiratorias",
+          "evidenceOptions": [
+            "Taquipnea",
+            "Uso de músculos accesorios",
+            "Disnea",
+            "Alteración de la profundidad respiratoria"
+          ],
+          "noc": [
+            "Ventilación"
+          ],
+          "nic": [
+            "Monitorización respiratoria",
+            "Posicionamiento",
+            "Ayuda a la ventilación"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c6-d4",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "desequilibrio aporte/demanda de oxígeno",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad"
+          ],
+          "nic": [
+            "Manejo de energía",
+            "Actividad progresiva"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c6-d5",
+          "label": "Ansiedad",
+          "type": "actual",
+          "proposedFactor": "sensación de falta de aire",
+          "evidenceOptions": [
+            "Preocupación expresada por la persona",
+            "Inquietud observada",
+            "Dificultad de concentración referida"
+          ],
+          "noc": [
+            "Nivel de ansiedad"
+          ],
+          "nic": [
+            "Disminución de ansiedad",
+            "Apoyo emocional",
+            "Técnicas de respiración"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "label": "Neumonía adquirida en la comunidad",
+      "findings": [
+        "fiebre",
+        "tos",
+        "expectoración purulenta",
+        "disnea",
+        "taquipnea",
+        "crépitos",
+        "hipoxemia",
+        "dolor pleurítico",
+        "escalofríos",
+        "fatiga"
+      ],
+      "diagnoses": [
+        {
+          "id": "c7-d1",
+          "label": "Deterioro del intercambio gaseoso",
+          "type": "actual",
+          "proposedFactor": "proceso infeccioso alveolar",
+          "evidenceOptions": [
+            "Hipoxemia documentada",
+            "Disnea",
+            "Alteración gasométrica documentada"
+          ],
+          "noc": [
+            "Intercambio gaseoso"
+          ],
+          "nic": [
+            "Oxigenoterapia",
+            "Monitorización respiratoria"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c7-d2",
+          "label": "Limpieza ineficaz de las vías aéreas",
+          "type": "actual",
+          "proposedFactor": "acumulación de secreciones",
+          "evidenceOptions": [
+            "Tos ineficaz observada",
+            "Dificultad para eliminar secreciones",
+            "Ruidos respiratorios adventicios"
+          ],
+          "noc": [
+            "Permeabilidad de las vías aéreas"
+          ],
+          "nic": [
+            "Manejo de vías aéreas",
+            "Fomento de tos",
+            "Fisioterapia respiratoria"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c7-d3",
+          "label": "Hipertermia",
+          "type": "actual",
+          "proposedFactor": "proceso infeccioso",
+          "evidenceOptions": [
+            "Temperatura corporal elevada medida",
+            "Piel caliente al tacto"
+          ],
+          "noc": [
+            "Termorregulación"
+          ],
+          "nic": [
+            "Tratamiento de la fiebre",
+            "Regulación de temperatura",
+            "Monitorización"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c7-d4",
+          "label": "Dolor agudo",
+          "type": "actual",
+          "proposedFactor": "proceso inflamatorio pleuropulmonar",
+          "evidenceOptions": [
+            "Dolor referido por la persona",
+            "Expresión facial de dolor observada"
+          ],
+          "noc": [
+            "Nivel del dolor"
+          ],
+          "nic": [
+            "Manejo del dolor",
+            "Administración de analgésicos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c7-d5",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "desequilibrio aporte/demanda de oxígeno",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad"
+          ],
+          "nic": [
+            "Manejo de energía",
+            "Ayuda con actividad"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "label": "Infección urinaria / pielonefritis",
+      "findings": [
+        "disuria",
+        "polaquiuria",
+        "urgencia urinaria",
+        "dolor suprapúbico",
+        "dolor lumbar",
+        "fiebre",
+        "escalofríos",
+        "náuseas",
+        "orina turbia",
+        "hematuria"
+      ],
+      "diagnoses": [
+        {
+          "id": "c8-d1",
+          "label": "Deterioro de la eliminación urinaria",
+          "type": "actual",
+          "proposedFactor": "irritación/infección del tracto urinario",
+          "evidenceOptions": [
+            "Disuria",
+            "Polaquiuria",
+            "Urgencia urinaria"
+          ],
+          "noc": [
+            "Eliminación urinaria"
+          ],
+          "nic": [
+            "Manejo de eliminación urinaria",
+            "Vigilancia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c8-d2",
+          "label": "Dolor agudo",
+          "type": "actual",
+          "proposedFactor": "proceso inflamatorio/infeccioso",
+          "evidenceOptions": [
+            "Dolor referido por la persona",
+            "Expresión facial de dolor observada"
+          ],
+          "noc": [
+            "Nivel del dolor"
+          ],
+          "nic": [
+            "Manejo del dolor",
+            "Administración de medicamentos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c8-d3",
+          "label": "Hipertermia",
+          "type": "actual",
+          "proposedFactor": "proceso infeccioso",
+          "evidenceOptions": [
+            "Temperatura corporal elevada medida",
+            "Piel caliente al tacto"
+          ],
+          "noc": [
+            "Termorregulación"
+          ],
+          "nic": [
+            "Tratamiento de la fiebre",
+            "Monitorización"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c8-d4",
+          "label": "Déficit de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "pérdidas aumentadas/ingesta insuficiente",
+          "evidenceOptions": [
+            "Mucosas secas",
+            "Taquicardia",
+            "Hipotensión",
+            "Disminución de la diuresis"
+          ],
+          "noc": [
+            "Hidratación"
+          ],
+          "nic": [
+            "Manejo de líquidos",
+            "Terapia intravenosa"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c8-d5",
+          "label": "Confusión aguda",
+          "type": "actual",
+          "proposedFactor": "proceso infeccioso/metabólico",
+          "evidenceOptions": [
+            "Desorientación observada",
+            "Alteración aguda de la atención",
+            "Fluctuación del nivel de conciencia"
+          ],
+          "noc": [
+            "Estado cognitivo"
+          ],
+          "nic": [
+            "Manejo de la confusión",
+            "Monitorización neurológica",
+            "Vigilancia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "label": "Enfermedad renal crónica descompensada",
+      "findings": [
+        "edema",
+        "oliguria",
+        "anuria",
+        "disnea",
+        "hipertensión",
+        "náuseas",
+        "vómito",
+        "prurito",
+        "fatiga",
+        "debilidad",
+        "alteraciones electrolíticas"
+      ],
+      "diagnoses": [
+        {
+          "id": "c9-d1",
+          "label": "Exceso de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "deterioro de mecanismos reguladores renales",
+          "evidenceOptions": [
+            "Edema periférico",
+            "Ganancia de peso",
+            "Ortopnea",
+            "Disnea",
+            "Crépitos"
+          ],
+          "noc": [
+            "Equilibrio hídrico",
+            "Severidad del edema"
+          ],
+          "nic": [
+            "Manejo de líquidos",
+            "Restricción de líquidos",
+            "Control de peso"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c9-d2",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "desequilibrio entre aporte y demanda energética",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad"
+          ],
+          "nic": [
+            "Manejo de energía",
+            "Ayuda con autocuidado"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c9-d3",
+          "label": "Fatiga",
+          "type": "actual",
+          "proposedFactor": "alteraciones metabólicas/anemia asociada",
+          "evidenceOptions": [
+            "Cansancio persistente referido",
+            "Debilidad referida",
+            "Dificultad para mantener las actividades habituales"
+          ],
+          "noc": [
+            "Nivel de fatiga"
+          ],
+          "nic": [
+            "Manejo de energía",
+            "Conservación de energía"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c9-d4",
+          "label": "Náuseas",
+          "type": "actual",
+          "proposedFactor": "acumulación de productos metabólicos",
+          "evidenceOptions": [
+            "Sensación de náuseas referida",
+            "Arcadas observadas"
+          ],
+          "noc": [
+            "Severidad de náuseas y vómitos"
+          ],
+          "nic": [
+            "Manejo de náuseas",
+            "Manejo nutricional"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c9-d5",
+          "label": "Riesgo de desequilibrio electrolítico",
+          "type": "risk",
+          "proposedFactor": "disminución de la función renal",
+          "evidenceOptions": [],
+          "noc": [
+            "Equilibrio electrolítico y ácido-base"
+          ],
+          "nic": [
+            "Manejo de electrolitos",
+            "Monitorización de electrolitos",
+            "Monitorización cardíaca"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "label": "Hemorragia digestiva alta",
+      "findings": [
+        "hematemesis",
+        "melena",
+        "palidez",
+        "diaforesis",
+        "taquicardia",
+        "hipotensión",
+        "mareo",
+        "síncope",
+        "debilidad",
+        "descenso de hemoglobina/hematocrito"
+      ],
+      "diagnoses": [
+        {
+          "id": "c10-d1",
+          "label": "Déficit de volumen de líquidos",
+          "type": "actual",
+          "proposedFactor": "pérdida activa de sangre",
+          "evidenceOptions": [
+            "Mucosas secas",
+            "Taquicardia",
+            "Hipotensión",
+            "Disminución de la diuresis"
+          ],
+          "noc": [
+            "Estado circulatorio",
+            "Hidratación"
+          ],
+          "nic": [
+            "Manejo de hipovolemia",
+            "Terapia intravenosa",
+            "Monitorización de líquidos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c10-d2",
+          "label": "Riesgo de shock",
+          "type": "risk",
+          "proposedFactor": "pérdida sanguínea gastrointestinal",
+          "evidenceOptions": [],
+          "noc": [
+            "Estado circulatorio",
+            "Perfusión tisular"
+          ],
+          "nic": [
+            "Prevención del shock",
+            "Monitorización hemodinámica",
+            "Vigilancia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c10-d3",
+          "label": "Náuseas",
+          "type": "actual",
+          "proposedFactor": "irritación gastrointestinal",
+          "evidenceOptions": [
+            "Sensación de náuseas referida",
+            "Arcadas observadas"
+          ],
+          "noc": [
+            "Control de náuseas y vómitos"
+          ],
+          "nic": [
+            "Manejo de náuseas",
+            "Administración de medicamentos"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c10-d4",
+          "label": "Dolor agudo",
+          "type": "actual",
+          "proposedFactor": "lesión/proceso gastrointestinal",
+          "evidenceOptions": [
+            "Dolor referido por la persona",
+            "Expresión facial de dolor observada"
+          ],
+          "noc": [
+            "Nivel del dolor"
+          ],
+          "nic": [
+            "Manejo del dolor",
+            "Vigilancia"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        },
+        {
+          "id": "c10-d5",
+          "label": "Intolerancia a la actividad",
+          "type": "actual",
+          "proposedFactor": "disminución de la capacidad de transporte de oxígeno",
+          "evidenceOptions": [
+            "Fatiga durante la actividad",
+            "Disnea al esfuerzo",
+            "Necesidad de pausas durante la actividad"
+          ],
+          "noc": [
+            "Tolerancia a la actividad"
+          ],
+          "nic": [
+            "Manejo de energía",
+            "Ayuda con actividades"
+          ],
+          "validation": {
+            "status": "pending",
+            "nandaEdition": null,
+            "nocEdition": null,
+            "nicEdition": null,
+            "nandaCode": null,
+            "reviewer": null,
+            "reviewedAt": null
+          },
+          "source": "Matriz aportada por el usuario; no cotejada con taxonomías autorizadas"
+        }
+      ]
+    }
+  ],
+  "outcomes": {
+    "Nivel del dolor": {
+      "profile": "symptom",
+      "indicators": [
+        "Intensidad del dolor referida",
+        "Manifestaciones observables de dolor"
+      ]
+    },
+    "Control del dolor": {
+      "profile": "behavior",
+      "indicators": [
+        "Comunica oportunamente el dolor",
+        "Aplica medidas acordadas para el alivio"
+      ]
+    },
+    "Efectividad de la bomba cardíaca": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de perfusión según valoración",
+        "Respuesta cardiovascular observada"
+      ]
+    },
+    "Estado cardiovascular": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de perfusión según valoración",
+        "Respuesta cardiovascular observada"
+      ]
+    },
+    "Tolerancia a la actividad": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para completar la actividad acordada",
+        "Capacidad para sostener la actividad según tolerancia"
+      ]
+    },
+    "Resistencia": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para completar la actividad acordada",
+        "Capacidad para sostener la actividad según tolerancia"
+      ]
+    },
+    "Nivel de ansiedad": {
+      "profile": "symptom",
+      "indicators": [
+        "Preocupación referida",
+        "Inquietud observada"
+      ]
+    },
+    "Autocontrol de la ansiedad": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Autocontrol de la enfermedad cardíaca": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Conocimiento del régimen terapéutico": {
+      "profile": "knowledge",
+      "indicators": [
+        "Explica el régimen terapéutico acordado",
+        "Identifica los signos que debe comunicar"
+      ]
+    },
+    "Equilibrio hídrico": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de hidratación según valoración",
+        "Balance de líquidos según registros"
+      ]
+    },
+    "Severidad del edema": {
+      "profile": "symptom",
+      "indicators": [
+        "Edema observado en la valoración"
+      ]
+    },
+    "Estado respiratorio: intercambio gaseoso": {
+      "profile": "physiology",
+      "indicators": [
+        "Intercambio gaseoso según datos disponibles"
+      ]
+    },
+    "Saturación de oxígeno": {
+      "profile": "physiology",
+      "indicators": [
+        "Oxigenación según medición e indicación individual"
+      ]
+    },
+    "Estado respiratorio: ventilación": {
+      "profile": "physiology",
+      "indicators": [
+        "Patrón y esfuerzo respiratorio observados"
+      ]
+    },
+    "Conducta de cumplimiento": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Autocontrol de la hipertensión": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Perfusión tisular cerebral": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de conciencia según valoración",
+        "Orientación observada"
+      ]
+    },
+    "Estado neurológico": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de conciencia según valoración",
+        "Orientación observada"
+      ]
+    },
+    "Movilidad": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para cambiar de posición",
+        "Capacidad para movilizarse con la asistencia indicada"
+      ]
+    },
+    "Consecuencias de la inmovilidad": {
+      "profile": "symptom",
+      "indicators": [
+        "Manifestaciones de incomodidad asociadas a inmovilidad",
+        "Limitaciones observadas asociadas a inmovilidad"
+      ]
+    },
+    "Deambulación": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para caminar con la asistencia indicada",
+        "Capacidad para iniciar y detener la marcha"
+      ]
+    },
+    "Consecuencias fisiológicas de la inmovilidad": {
+      "profile": "symptom",
+      "indicators": [
+        "Manifestaciones de incomodidad asociadas a inmovilidad",
+        "Limitaciones observadas asociadas a inmovilidad"
+      ]
+    },
+    "Comunicación: expresión": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para expresar necesidades"
+      ]
+    },
+    "Comunicación: recepción": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para comprender mensajes adaptados"
+      ]
+    },
+    "Estado de la deglución": {
+      "profile": "physiology",
+      "indicators": [
+        "Función deglutoria según valoración autorizada"
+      ]
+    },
+    "Autocuidados: actividades de la vida diaria": {
+      "profile": "function",
+      "indicators": [
+        "Capacidad para realizar el aseo",
+        "Capacidad para vestirse con la asistencia indicada"
+      ]
+    },
+    "Estado neurológico: conciencia": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de conciencia según valoración",
+        "Orientación observada"
+      ]
+    },
+    "Orientación cognitiva": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de conciencia según valoración",
+        "Orientación observada"
+      ]
+    },
+    "Hidratación": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de hidratación según valoración",
+        "Balance de líquidos según registros"
+      ]
+    },
+    "Autocontrol de la diabetes": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Adherencia al tratamiento": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    },
+    "Nivel de fatiga": {
+      "profile": "symptom",
+      "indicators": [
+        "Fatiga referida durante las actividades",
+        "Necesidad de interrumpir la actividad por cansancio"
+      ]
+    },
+    "Nivel de glucemia": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado glucémico según medición y meta individual"
+      ]
+    },
+    "Intercambio gaseoso": {
+      "profile": "physiology",
+      "indicators": [
+        "Intercambio gaseoso según datos disponibles"
+      ]
+    },
+    "Permeabilidad de las vías respiratorias": {
+      "profile": "physiology",
+      "indicators": [
+        "Permeabilidad de la vía aérea según valoración"
+      ]
+    },
+    "Ventilación": {
+      "profile": "physiology",
+      "indicators": [
+        "Patrón y esfuerzo respiratorio observados"
+      ]
+    },
+    "Permeabilidad de las vías aéreas": {
+      "profile": "physiology",
+      "indicators": [
+        "Permeabilidad de la vía aérea según valoración"
+      ]
+    },
+    "Termorregulación": {
+      "profile": "physiology",
+      "indicators": [
+        "Regulación de la temperatura según medición"
+      ]
+    },
+    "Eliminación urinaria": {
+      "profile": "physiology",
+      "indicators": [
+        "Patrón de eliminación urinaria según valoración"
+      ]
+    },
+    "Estado cognitivo": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de conciencia según valoración",
+        "Orientación observada"
+      ]
+    },
+    "Severidad de náuseas y vómitos": {
+      "profile": "symptom",
+      "indicators": [
+        "Náuseas referidas",
+        "Episodios de vómito observados"
+      ]
+    },
+    "Equilibrio electrolítico y ácido-base": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado electrolítico según resultados disponibles"
+      ]
+    },
+    "Estado circulatorio": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de perfusión según valoración",
+        "Respuesta cardiovascular observada"
+      ]
+    },
+    "Perfusión tisular": {
+      "profile": "physiology",
+      "indicators": [
+        "Estado de perfusión según valoración",
+        "Respuesta cardiovascular observada"
+      ]
+    },
+    "Control de náuseas y vómitos": {
+      "profile": "behavior",
+      "indicators": [
+        "Demuestra las conductas de autocuidado acordadas",
+        "Reconoce y comunica cambios relacionados con su condición"
+      ]
+    }
+  },
+  "interventions": {
+    "Manejo del dolor": [
+      "Valorar las características del dolor con el método acordado",
+      "Aplicar medidas de confort individualizadas según protocolo",
+      "Reevaluar la respuesta a las medidas de alivio"
+    ],
+    "Administración de medicamentos": [
+      "Verificar la prescripción vigente y las condiciones para la administración",
+      "Administrar el tratamiento prescrito según protocolo y registrar la respuesta",
+      "Comprobar la respuesta y comunicar efectos no esperados"
+    ],
+    "Vigilancia": [
+      "Realizar la valoración y las mediciones previstas para el caso",
+      "Registrar y comparar los hallazgos con la valoración previa",
+      "Comunicar cambios relevantes según protocolo"
+    ],
+    "Cuidados cardíacos agudos": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Monitorización cardíaca": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Monitorización hemodinámica": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Manejo de la energía": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Manejo de la actividad": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Movilización progresiva": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Disminución de la ansiedad": [
+      "Escuchar las preocupaciones de la persona",
+      "Explicar el procedimiento o cuidado antes de realizarlo",
+      "Acompañar y facilitar estrategias de afrontamiento acordadas"
+    ],
+    "Apoyo emocional": [
+      "Escuchar las preocupaciones de la persona",
+      "Explicar el procedimiento o cuidado antes de realizarlo",
+      "Acompañar y facilitar estrategias de afrontamiento acordadas"
+    ],
+    "Información preparatoria": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Enseñanza: proceso de enfermedad": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Enseñanza: medicamentos": [
+      "Verificar la prescripción vigente y las condiciones para la administración",
+      "Administrar el tratamiento prescrito según protocolo y registrar la respuesta",
+      "Comprobar la respuesta y comunicar efectos no esperados"
+    ],
+    "Planificación del alta": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Cuidados cardíacos": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Vigilancia hemodinámica": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Manejo de líquidos": [
+      "Verificar el plan de líquidos o la prescripción vigente",
+      "Registrar ingresos, egresos y respuesta según el plan indicado",
+      "Comunicar cambios relevantes del balance o de la tolerancia"
+    ],
+    "Monitorización de líquidos": [
+      "Verificar el plan de líquidos o la prescripción vigente",
+      "Registrar ingresos, egresos y respuesta según el plan indicado",
+      "Comunicar cambios relevantes del balance o de la tolerancia"
+    ],
+    "Control del peso": [
+      "Comprobar las condiciones de la medición del peso",
+      "Registrar el peso y compararlo con mediciones disponibles"
+    ],
+    "Oxigenoterapia": [
+      "Verificar las indicaciones y el dispositivo respiratorio prescrito",
+      "Observar tolerancia, esfuerzo respiratorio y respuesta al soporte",
+      "Comunicar cambios respiratorios según el protocolo institucional"
+    ],
+    "Monitorización respiratoria": [
+      "Realizar la valoración respiratoria y las mediciones indicadas",
+      "Registrar los resultados y la condición durante la medición",
+      "Comunicar cambios respiratorios según protocolo"
+    ],
+    "Posicionamiento": [
+      "Ayudar al cambio de posición según tolerancia y plan individual",
+      "Comprobar comodidad, alineación y protección durante el cambio",
+      "Reevaluar la respuesta de la persona después de la movilización"
+    ],
+    "Manejo de las vías aéreas": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Ayuda con el autocuidado": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Actividad progresiva": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Educación sanitaria": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Enseñanza de medicamentos": [
+      "Verificar la prescripción vigente y las condiciones para la administración",
+      "Administrar el tratamiento prescrito según protocolo y registrar la respuesta",
+      "Comprobar la respuesta y comunicar efectos no esperados"
+    ],
+    "Facilitar la autorresponsabilidad": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Control de peso": [
+      "Comprobar las condiciones de la medición del peso",
+      "Registrar el peso y compararlo con mediciones disponibles"
+    ],
+    "Monitorización de electrolitos": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Monitorización neurológica": [
+      "Realizar la valoración neurológica indicada",
+      "Comparar los hallazgos con la valoración previa",
+      "Comunicar cambios neurológicos según protocolo"
+    ],
+    "Monitorización de signos vitales": [
+      "Realizar la valoración y las mediciones previstas para el caso",
+      "Registrar y comparar los hallazgos con la valoración previa",
+      "Comunicar cambios relevantes según protocolo"
+    ],
+    "Manejo de la presión arterial": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Cambio de posición": [
+      "Ayudar al cambio de posición según tolerancia y plan individual",
+      "Comprobar comodidad, alineación y protección durante el cambio",
+      "Reevaluar la respuesta de la persona después de la movilización"
+    ],
+    "Terapia de ejercicios": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Prevención de complicaciones": [
+      "Valorar factores de riesgo antes del cuidado",
+      "Aplicar las medidas de prevención individualizadas",
+      "Verificar que la persona disponga del medio para solicitar ayuda"
+    ],
+    "Terapia de ejercicios: movilidad articular": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Ayuda en la deambulación": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Prevención de caídas": [
+      "Valorar factores de riesgo antes del cuidado",
+      "Aplicar las medidas de prevención individualizadas",
+      "Verificar que la persona disponga del medio para solicitar ayuda"
+    ],
+    "Cuidados del paciente encamado": [
+      "Ayudar al cambio de posición según tolerancia y plan individual",
+      "Comprobar comodidad, alineación y protección durante el cambio",
+      "Reevaluar la respuesta de la persona después de la movilización"
+    ],
+    "Mejora de la comunicación": [
+      "Identificar el medio de comunicación que la persona puede utilizar",
+      "Facilitar preguntas y respuestas mediante un recurso adaptado",
+      "Comprobar la comprensión del mensaje"
+    ],
+    "Escucha activa": [
+      "Escuchar las preocupaciones de la persona",
+      "Explicar el procedimiento o cuidado antes de realizarlo",
+      "Acompañar y facilitar estrategias de afrontamiento acordadas"
+    ],
+    "Terapia de deglución": [
+      "Verificar el plan de alimentación y deglución indicado antes del cuidado",
+      "Aplicar las precauciones individualizadas establecidas por el equipo",
+      "Observar tolerancia y comunicar dificultades durante el cuidado"
+    ],
+    "Precauciones para evitar aspiración": [
+      "Verificar el plan de alimentación y deglución indicado antes del cuidado",
+      "Aplicar las precauciones individualizadas establecidas por el equipo",
+      "Observar tolerancia y comunicar dificultades durante el cuidado"
+    ],
+    "Manejo de la alimentación": [
+      "Verificar el plan de alimentación y deglución indicado antes del cuidado",
+      "Aplicar las precauciones individualizadas establecidas por el equipo",
+      "Observar tolerancia y comunicar dificultades durante el cuidado"
+    ],
+    "Fomento de la independencia": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Manejo de la confusión": [
+      "Valorar la orientación y los cambios de atención",
+      "Facilitar referencias de tiempo, lugar y personas",
+      "Comunicar cambios agudos según el protocolo institucional"
+    ],
+    "Orientación de la realidad": [
+      "Valorar la orientación y los cambios de atención",
+      "Facilitar referencias de tiempo, lugar y personas",
+      "Comunicar cambios agudos según el protocolo institucional"
+    ],
+    "Terapia intravenosa": [
+      "Verificar el plan de líquidos o la prescripción vigente",
+      "Registrar ingresos, egresos y respuesta según el plan indicado",
+      "Comunicar cambios relevantes del balance o de la tolerancia"
+    ],
+    "Enseñanza: diabetes": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Educación nutricional": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Manejo nutricional": [
+      "Verificar el plan nutricional indicado",
+      "Observar y registrar la tolerancia a la ingesta",
+      "Comunicar barreras para cumplir el plan nutricional"
+    ],
+    "Manejo de la hiperglucemia": [
+      "Verificar la programación e indicación de controles de glucosa",
+      "Realizar y registrar la medición según el protocolo",
+      "Comunicar resultados fuera de la meta individual según protocolo"
+    ],
+    "Monitorización de glucosa": [
+      "Verificar la programación e indicación de controles de glucosa",
+      "Realizar y registrar la medición según el protocolo",
+      "Comunicar resultados fuera de la meta individual según protocolo"
+    ],
+    "Manejo de la hiperglucemia/hipoglucemia": [
+      "Verificar la programación e indicación de controles de glucosa",
+      "Realizar y registrar la medición según el protocolo",
+      "Comunicar resultados fuera de la meta individual según protocolo"
+    ],
+    "Educación diabetológica": [
+      "Explicar el cuidado o tratamiento acordado con lenguaje adaptado",
+      "Comprobar la comprensión mediante explicación de la persona",
+      "Revisar los cuidados y signos que debe comunicar al equipo"
+    ],
+    "Gasometría/oximetría": [
+      "Realizar la valoración respiratoria y las mediciones indicadas",
+      "Registrar los resultados y la condición durante la medición",
+      "Comunicar cambios respiratorios según protocolo"
+    ],
+    "Manejo de vías aéreas": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Fomento de la tos": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Fisioterapia respiratoria": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Ayuda a la ventilación": [
+      "Verificar las indicaciones y el dispositivo respiratorio prescrito",
+      "Observar tolerancia, esfuerzo respiratorio y respuesta al soporte",
+      "Comunicar cambios respiratorios según el protocolo institucional"
+    ],
+    "Manejo de energía": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Disminución de ansiedad": [
+      "Escuchar las preocupaciones de la persona",
+      "Explicar el procedimiento o cuidado antes de realizarlo",
+      "Acompañar y facilitar estrategias de afrontamiento acordadas"
+    ],
+    "Técnicas de respiración": [
+      "Verificar las indicaciones y el dispositivo respiratorio prescrito",
+      "Observar tolerancia, esfuerzo respiratorio y respuesta al soporte",
+      "Comunicar cambios respiratorios según el protocolo institucional"
+    ],
+    "Fomento de tos": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Tratamiento de la fiebre": [
+      "Medir y registrar la temperatura según protocolo",
+      "Aplicar las medidas indicadas para el confort y la regulación térmica",
+      "Reevaluar la temperatura y la respuesta a las medidas"
+    ],
+    "Regulación de temperatura": [
+      "Medir y registrar la temperatura según protocolo",
+      "Aplicar las medidas indicadas para el confort y la regulación térmica",
+      "Reevaluar la temperatura y la respuesta a las medidas"
+    ],
+    "Monitorización": [
+      "Realizar la valoración y las mediciones previstas para el caso",
+      "Registrar y comparar los hallazgos con la valoración previa",
+      "Comunicar cambios relevantes según protocolo"
+    ],
+    "Administración de analgésicos": [
+      "Verificar la prescripción vigente y las condiciones para la administración",
+      "Administrar el tratamiento prescrito según protocolo y registrar la respuesta",
+      "Comprobar la respuesta y comunicar efectos no esperados"
+    ],
+    "Ayuda con actividad": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Manejo de eliminación urinaria": [
+      "Valorar el patrón de eliminación y las molestias referidas",
+      "Registrar características de la eliminación según el plan",
+      "Comunicar cambios relevantes al equipo"
+    ],
+    "Restricción de líquidos": [
+      "Verificar el plan de líquidos o la prescripción vigente",
+      "Registrar ingresos, egresos y respuesta según el plan indicado",
+      "Comunicar cambios relevantes del balance o de la tolerancia"
+    ],
+    "Ayuda con autocuidado": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Conservación de energía": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ],
+    "Manejo de náuseas": [
+      "Valorar las náuseas y los factores asociados",
+      "Aplicar medidas de confort acordadas según tolerancia",
+      "Reevaluar la respuesta y registrar episodios observados"
+    ],
+    "Manejo de electrolitos": [
+      "Valorar la capacidad para movilizar secreciones",
+      "Favorecer las medidas indicadas para la eliminación de secreciones",
+      "Reevaluar la permeabilidad y comunicar cambios respiratorios"
+    ],
+    "Manejo de hipovolemia": [
+      "Verificar el plan de líquidos o la prescripción vigente",
+      "Registrar ingresos, egresos y respuesta según el plan indicado",
+      "Comunicar cambios relevantes del balance o de la tolerancia"
+    ],
+    "Prevención del shock": [
+      "Valorar el estado circulatorio según protocolo",
+      "Registrar las mediciones y compararlas con el plan individual",
+      "Comunicar oportunamente cambios hemodinámicos al equipo"
+    ],
+    "Ayuda con actividades": [
+      "Valorar la tolerancia antes de iniciar la actividad",
+      "Brindar la asistencia acordada y permitir pausas según tolerancia",
+      "Reevaluar la respuesta al finalizar la actividad"
+    ]
+  },
+  "scales": {
+    "function": [
+      "Dependencia total",
+      "Necesita ayuda amplia",
+      "Necesita ayuda moderada",
+      "Necesita ayuda mínima",
+      "Independiente"
+    ],
+    "symptom": [
+      "Muy intenso / muy frecuente",
+      "Intenso / frecuente",
+      "Moderado",
+      "Leve / ocasional",
+      "Ausente"
+    ],
+    "physiology": [
+      "Alteración muy marcada",
+      "Alteración marcada",
+      "Alteración moderada",
+      "Alteración leve",
+      "Sin alteración apreciable"
+    ],
+    "behavior": [
+      "No lo demuestra",
+      "Lo demuestra rara vez",
+      "Lo demuestra ocasionalmente",
+      "Lo demuestra con frecuencia",
+      "Lo demuestra consistentemente"
+    ],
+    "knowledge": [
+      "No lo explica",
+      "Lo explica con mucho apoyo",
+      "Lo explica parcialmente",
+      "Lo explica con apoyo mínimo",
+      "Lo explica sin apoyo"
+    ]
+  },
+  "sources": [
+    "Observación y examen de enfermería",
+    "Entrevista a la persona",
+    "Información de acompañante",
+    "Historia clínica y mediciones disponibles"
+  ],
+  "moments": [
+    "Al ingreso",
+    "Al inicio del turno",
+    "Durante el turno",
+    "Al cierre del turno"
+  ],
+  "deadlines": [
+    "Al finalizar esta intervención",
+    "En la próxima reevaluación del turno",
+    "Al finalizar el turno",
+    "En el siguiente turno",
+    "Antes del alta"
+  ],
+  "schedules": [
+    "Al inicio del turno",
+    "Durante el turno según protocolo",
+    "Antes y después de la intervención",
+    "Al finalizar el turno",
+    "Según prescripción vigente",
+    "Ante cambios en la condición"
+  ],
+  "responsibles": [
+    "Profesional de enfermería",
+    "Auxiliar según delegación y competencia",
+    "Equipo interdisciplinario"
+  ],
+  "notes": [
+    "Actividad completada según lo planificado",
+    "Actividad completada con adaptación según tolerancia",
+    "Cambio observado y comunicado al equipo",
+    "Persona rechaza la actividad",
+    "Condición clínica impide realizarla",
+    "Pendiente de indicación o recurso",
+    "Reprogramada por el equipo"
+  ],
+  "responses": [
+    "Valoración directa del indicador",
+    "Respuesta referida por la persona",
+    "Medición disponible revisada",
+    "Información del acompañante corroborada"
+  ],
+  "nonEvaluable": [
+    "No fue posible obtener la valoración",
+    "Persona no disponible para evaluar",
+    "Indicador no aplicable en este momento",
+    "Se requiere un método de evaluación diferente"
+  ],
+  "followups": [
+    "Mantener el plan y reevaluar",
+    "Ajustar el plan tras valoración",
+    "Revisar con el equipo tratante",
+    "Proponer cierre del diagnóstico tras valoración"
+  ]
+}

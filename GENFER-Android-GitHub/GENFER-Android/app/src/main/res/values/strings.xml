@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GENFER · PAE</string>
+    <style name="Theme.Genfer" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#0D6B5E</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F4F6F2</item>
+        <item name="android:navigationBarColor">#F4F6F2</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
