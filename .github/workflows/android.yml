@@ -1,0 +1,43 @@
+name: Compilar APK de GENFER
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compilar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    defaults:
+      run:
+        working-directory: GENFER-Android-GitHub/GENFER-Android
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v7
+
+      - name: Preparar Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Preparar Android
+        run: |
+          "${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager" \
+            "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Probar y generar APK
+        run: bash gradlew --no-daemon --stacktrace :app:testDebugUnitTest :app:assembleDebug
+
+      - name: Guardar APK descargable
+        uses: actions/upload-artifact@v7
+        with:
+          name: GENFER-APK
+          path: GENFER-Android-GitHub/GENFER-Android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
