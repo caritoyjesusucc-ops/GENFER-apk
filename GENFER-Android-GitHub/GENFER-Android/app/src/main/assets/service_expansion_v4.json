@@ -1,0 +1,985 @@
+{
+  "version": "4.0",
+  "conditions": [
+    {
+      "service": "Hematología",
+      "label": "Pancitopenia severa",
+      "findings": [
+        "fatiga",
+        "palidez",
+        "petequias",
+        "sangrado mucoso",
+        "fiebre",
+        "infecciones recurrentes",
+        "taquicardia",
+        "disnea de esfuerzo"
+      ]
+    },
+    {
+      "service": "Hematología",
+      "label": "Anemia hemolítica aguda",
+      "findings": [
+        "palidez",
+        "ictericia",
+        "fatiga",
+        "taquicardia",
+        "disnea",
+        "orina oscura",
+        "dolor lumbar o abdominal",
+        "elevación de bilirrubina"
+      ]
+    },
+    {
+      "service": "Hematología",
+      "label": "Crisis vasooclusiva en enfermedad falciforme",
+      "findings": [
+        "dolor intenso",
+        "edema",
+        "taquicardia",
+        "deshidratación",
+        "hipoxemia",
+        "fiebre",
+        "limitación funcional",
+        "ansiedad"
+      ]
+    },
+    {
+      "service": "Hematología",
+      "label": "Coagulación intravascular diseminada",
+      "findings": [
+        "sangrado difuso",
+        "equimosis",
+        "petequias",
+        "hipotensión",
+        "taquicardia",
+        "oliguria",
+        "alteración de conciencia",
+        "alteración de coagulación"
+      ]
+    },
+    {
+      "service": "Hematología",
+      "label": "Anemia aplásica",
+      "findings": [
+        "fatiga",
+        "palidez",
+        "infecciones",
+        "fiebre",
+        "petequias",
+        "sangrado",
+        "debilidad",
+        "disnea de esfuerzo"
+      ]
+    },
+    {
+      "service": "Medicina Interna",
+      "label": "Síncope en estudio",
+      "findings": [
+        "pérdida transitoria de conciencia",
+        "mareo",
+        "palpitaciones",
+        "hipotensión",
+        "debilidad",
+        "caída asociada",
+        "confusión breve",
+        "náuseas"
+      ]
+    },
+    {
+      "service": "Medicina Interna",
+      "label": "Síndrome confusional agudo del adulto mayor",
+      "findings": [
+        "inicio agudo",
+        "inatención",
+        "desorientación",
+        "fluctuación cognitiva",
+        "agitación o hipoactividad",
+        "alteración del sueño",
+        "riesgo de caída",
+        "cambios conductuales"
+      ]
+    },
+    {
+      "service": "Medicina Interna",
+      "label": "Polifarmacia con evento adverso",
+      "findings": [
+        "mareo",
+        "somnolencia",
+        "hipotensión",
+        "náuseas",
+        "caídas",
+        "alteración cognitiva",
+        "bradicardia o taquicardia",
+        "debilidad"
+      ]
+    },
+    {
+      "service": "Medicina Interna",
+      "label": "Síndrome febril de origen por definir",
+      "findings": [
+        "fiebre",
+        "escalofríos",
+        "diaforesis",
+        "taquicardia",
+        "astenia",
+        "anorexia",
+        "cefalea",
+        "malestar general"
+      ]
+    },
+    {
+      "service": "Medicina Interna",
+      "label": "Síndrome de fragilidad descompensado",
+      "findings": [
+        "debilidad",
+        "pérdida de peso",
+        "caídas",
+        "fatiga",
+        "baja tolerancia al esfuerzo",
+        "dependencia funcional",
+        "disminución de ingesta",
+        "lentitud"
+      ]
+    },
+    {
+      "service": "Infectología",
+      "label": "Bacteriemia asociada a catéter",
+      "findings": [
+        "fiebre",
+        "escalofríos",
+        "taquicardia",
+        "hipotensión",
+        "dolor o eritema en catéter",
+        "secreción local",
+        "malestar",
+        "alteración de laboratorio"
+      ]
+    },
+    {
+      "service": "Infectología",
+      "label": "Osteomielitis",
+      "findings": [
+        "dolor óseo",
+        "fiebre",
+        "edema",
+        "eritema",
+        "calor local",
+        "limitación funcional",
+        "secreción por herida",
+        "elevación de marcadores inflamatorios"
+      ]
+    },
+    {
+      "service": "Infectología",
+      "label": "Infección por Clostridioides difficile",
+      "findings": [
+        "diarrea acuosa",
+        "dolor abdominal",
+        "fiebre",
+        "deshidratación",
+        "leucocitosis",
+        "debilidad",
+        "distensión",
+        "náuseas"
+      ]
+    },
+    {
+      "service": "Infectología",
+      "label": "Infección de piel y tejidos blandos complicada",
+      "findings": [
+        "eritema",
+        "dolor",
+        "edema",
+        "calor",
+        "fiebre",
+        "exudado",
+        "mal olor",
+        "signos de sepsis"
+      ]
+    },
+    {
+      "service": "Infectología",
+      "label": "Infección oportunista en inmunosuprimido",
+      "findings": [
+        "fiebre",
+        "pérdida de peso",
+        "disnea",
+        "tos",
+        "diarrea",
+        "lesiones orales",
+        "debilidad",
+        "alteración neurológica"
+      ]
+    },
+    {
+      "service": "Reumatología",
+      "label": "Brote de lupus eritematoso sistémico",
+      "findings": [
+        "artralgias",
+        "fatiga",
+        "fiebre",
+        "erupción cutánea",
+        "edema",
+        "dolor pleurítico",
+        "alteración renal",
+        "cefalea"
+      ]
+    },
+    {
+      "service": "Reumatología",
+      "label": "Artritis reumatoide activa",
+      "findings": [
+        "dolor articular",
+        "rigidez matutina",
+        "edema articular",
+        "limitación funcional",
+        "fatiga",
+        "deformidad",
+        "debilidad",
+        "alteración del sueño"
+      ]
+    },
+    {
+      "service": "Reumatología",
+      "label": "Vasculitis sistémica",
+      "findings": [
+        "fiebre",
+        "púrpura",
+        "dolor neuropático",
+        "debilidad",
+        "dolor abdominal",
+        "alteración renal",
+        "cefalea",
+        "isquemia periférica"
+      ]
+    },
+    {
+      "service": "Reumatología",
+      "label": "Crisis aguda de gota",
+      "findings": [
+        "dolor articular intenso",
+        "eritema",
+        "edema",
+        "calor local",
+        "limitación funcional",
+        "hipersensibilidad al tacto",
+        "alteración del sueño",
+        "ansiedad"
+      ]
+    },
+    {
+      "service": "Reumatología",
+      "label": "Esclerosis sistémica con compromiso orgánico",
+      "findings": [
+        "fenómeno de Raynaud",
+        "disfagia",
+        "disnea",
+        "piel endurecida",
+        "dolor",
+        "úlceras digitales",
+        "fatiga",
+        "limitación funcional"
+      ]
+    },
+    {
+      "service": "Endocrinología",
+      "label": "Tormenta tiroidea",
+      "findings": [
+        "fiebre",
+        "taquicardia",
+        "agitación",
+        "temblor",
+        "diarrea",
+        "vómito",
+        "insuficiencia cardiaca",
+        "alteración de conciencia"
+      ]
+    },
+    {
+      "service": "Endocrinología",
+      "label": "Coma mixedematoso",
+      "findings": [
+        "hipotermia",
+        "bradicardia",
+        "hipotensión",
+        "hipoventilación",
+        "somnolencia",
+        "hiponatremia",
+        "edema",
+        "alteración de conciencia"
+      ]
+    },
+    {
+      "service": "Endocrinología",
+      "label": "Crisis suprarrenal",
+      "findings": [
+        "hipotensión",
+        "dolor abdominal",
+        "vómito",
+        "debilidad",
+        "hiponatremia",
+        "hiperpotasemia",
+        "hipoglucemia",
+        "alteración de conciencia"
+      ]
+    },
+    {
+      "service": "Endocrinología",
+      "label": "SIADH sintomático",
+      "findings": [
+        "hiponatremia",
+        "cefalea",
+        "náuseas",
+        "confusión",
+        "convulsiones",
+        "somnolencia",
+        "debilidad",
+        "oliguria relativa"
+      ]
+    },
+    {
+      "service": "Endocrinología",
+      "label": "Hipercalcemia severa",
+      "findings": [
+        "debilidad",
+        "confusión",
+        "estreñimiento",
+        "poliuria",
+        "polidipsia",
+        "náuseas",
+        "arritmias",
+        "deshidratación"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Shock séptico con disfunción orgánica",
+      "findings": [
+        "hipotensión",
+        "taquicardia",
+        "lactato elevado",
+        "oliguria",
+        "alteración de conciencia",
+        "fiebre o hipotermia",
+        "piel moteada",
+        "hipoxemia"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Shock cardiogénico",
+      "findings": [
+        "hipotensión",
+        "piel fría",
+        "oliguria",
+        "disnea",
+        "crépitos",
+        "alteración de conciencia",
+        "taquicardia o bradicardia",
+        "lactato elevado"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Síndrome de disfunción multiorgánica",
+      "findings": [
+        "alteración respiratoria",
+        "oliguria",
+        "hipotensión",
+        "alteración hepática",
+        "coagulopatía",
+        "alteración neurológica",
+        "acidosis",
+        "inestabilidad térmica"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Paciente posparo cardiorrespiratorio",
+      "findings": [
+        "alteración de conciencia",
+        "inestabilidad hemodinámica",
+        "arritmias",
+        "hipoxemia",
+        "acidosis",
+        "convulsiones",
+        "oliguria",
+        "alteraciones pupilares"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Destete difícil de ventilación mecánica",
+      "findings": [
+        "taquipnea",
+        "uso de músculos accesorios",
+        "ansiedad",
+        "desaturación",
+        "taquicardia",
+        "fatiga",
+        "secreciones",
+        "alteración gasométrica"
+      ]
+    },
+    {
+      "service": "Cuidado Intensivo",
+      "label": "Sedación prolongada con riesgo de delirium",
+      "findings": [
+        "somnolencia",
+        "desorientación al despertar",
+        "agitación",
+        "alteración ciclo sueño-vigilia",
+        "debilidad",
+        "inmovilidad",
+        "dependencia funcional",
+        "riesgo de aspiración"
+      ]
+    },
+    {
+      "service": "Ginecooncología",
+      "label": "Cáncer de cuello uterino avanzado",
+      "findings": [
+        "sangrado vaginal",
+        "dolor pélvico",
+        "fatiga",
+        "pérdida de peso",
+        "anemia",
+        "secreción vaginal",
+        "alteración urinaria",
+        "ansiedad"
+      ]
+    },
+    {
+      "service": "Ginecooncología",
+      "label": "Cáncer de ovario con ascitis maligna",
+      "findings": [
+        "distensión abdominal",
+        "dolor pélvico",
+        "disnea",
+        "saciedad temprana",
+        "pérdida de peso",
+        "edema",
+        "fatiga",
+        "náuseas"
+      ]
+    },
+    {
+      "service": "Ginecooncología",
+      "label": "Poshisterectomía oncológica",
+      "findings": [
+        "dolor pélvico",
+        "sangrado",
+        "herida quirúrgica",
+        "náuseas",
+        "retención urinaria",
+        "limitación funcional",
+        "drenajes",
+        "ansiedad"
+      ]
+    },
+    {
+      "service": "Ginecooncología",
+      "label": "Cáncer de endometrio posoperatorio",
+      "findings": [
+        "dolor",
+        "sangrado vaginal",
+        "herida quirúrgica",
+        "fatiga",
+        "náuseas",
+        "limitación de movilidad",
+        "alteración de imagen corporal",
+        "ansiedad"
+      ]
+    },
+    {
+      "service": "Ginecooncología",
+      "label": "Complicación linfática poscirugía ginecológica",
+      "findings": [
+        "edema de extremidad",
+        "dolor",
+        "pesadez",
+        "limitación funcional",
+        "cambios cutáneos",
+        "riesgo de infección",
+        "ansiedad",
+        "alteración de imagen corporal"
+      ]
+    },
+    {
+      "service": "Medicina del Dolor",
+      "label": "Dolor oncológico complejo",
+      "findings": [
+        "dolor persistente",
+        "interferencia con sueño",
+        "limitación funcional",
+        "ansiedad",
+        "fatiga",
+        "disminución de apetito",
+        "uso de opioides",
+        "impacto emocional"
+      ]
+    },
+    {
+      "service": "Medicina del Dolor",
+      "label": "Dolor neuropático severo",
+      "findings": [
+        "quemazón",
+        "descargas eléctricas",
+        "alodinia",
+        "parestesias",
+        "hiperalgesia",
+        "insomnio",
+        "ansiedad",
+        "limitación funcional"
+      ]
+    },
+    {
+      "service": "Medicina del Dolor",
+      "label": "Dolor posoperatorio de difícil control",
+      "findings": [
+        "dolor intenso",
+        "taquicardia",
+        "respiración superficial",
+        "insomnio",
+        "ansiedad",
+        "limitación de movilidad",
+        "náuseas",
+        "dificultad para toser"
+      ]
+    },
+    {
+      "service": "Medicina del Dolor",
+      "label": "Dolor musculoesquelético crónico reagudizado",
+      "findings": [
+        "dolor",
+        "rigidez",
+        "limitación funcional",
+        "fatiga",
+        "alteración del sueño",
+        "ansiedad",
+        "disminución de actividad",
+        "uso prolongado de analgésicos"
+      ]
+    },
+    {
+      "service": "Oncología",
+      "label": "Síndrome de lisis tumoral",
+      "findings": [
+        "hiperpotasemia",
+        "hiperfosfatemia",
+        "hipocalcemia",
+        "lesión renal",
+        "náuseas",
+        "debilidad",
+        "arritmias",
+        "convulsiones"
+      ]
+    },
+    {
+      "service": "Oncología",
+      "label": "Síndrome de vena cava superior",
+      "findings": [
+        "edema facial",
+        "disnea",
+        "ingurgitación yugular",
+        "tos",
+        "cianosis",
+        "cefalea",
+        "edema de miembros superiores",
+        "ortopnea"
+      ]
+    },
+    {
+      "service": "Oncología",
+      "label": "Hipercalcemia maligna",
+      "findings": [
+        "confusión",
+        "estreñimiento",
+        "náuseas",
+        "poliuria",
+        "deshidratación",
+        "debilidad",
+        "arritmias",
+        "somnolencia"
+      ]
+    },
+    {
+      "service": "Oncología",
+      "label": "Toxicidad aguda por quimioterapia",
+      "findings": [
+        "náuseas",
+        "vómito",
+        "mucositis",
+        "diarrea",
+        "fatiga",
+        "mielosupresión",
+        "dolor",
+        "deshidratación"
+      ]
+    },
+    {
+      "service": "Oncología",
+      "label": "Neutropenia febril",
+      "findings": [
+        "fiebre",
+        "escalofríos",
+        "neutropenia",
+        "taquicardia",
+        "debilidad",
+        "mucositis",
+        "hipotensión",
+        "foco infeccioso posible"
+      ]
+    },
+    {
+      "service": "Radiooncología",
+      "label": "Radiodermatitis",
+      "findings": [
+        "eritema",
+        "dolor",
+        "prurito",
+        "descamación",
+        "exudado",
+        "hipersensibilidad",
+        "alteración de piel",
+        "malestar"
+      ]
+    },
+    {
+      "service": "Radiooncología",
+      "label": "Mucositis por radioterapia",
+      "findings": [
+        "dolor oral",
+        "úlceras",
+        "odinofagia",
+        "disminución de ingesta",
+        "sangrado mucoso",
+        "xerostomía",
+        "pérdida de peso",
+        "riesgo de infección"
+      ]
+    },
+    {
+      "service": "Radiooncología",
+      "label": "Esofagitis por radiación",
+      "findings": [
+        "odinofagia",
+        "disfagia",
+        "dolor retroesternal",
+        "disminución de ingesta",
+        "pérdida de peso",
+        "deshidratación",
+        "náuseas",
+        "fatiga"
+      ]
+    },
+    {
+      "service": "Radiooncología",
+      "label": "Cistitis o proctitis por radiación",
+      "findings": [
+        "disuria",
+        "urgencia urinaria",
+        "hematuria",
+        "diarrea",
+        "tenesmo",
+        "dolor pélvico",
+        "sangrado rectal",
+        "fatiga"
+      ]
+    },
+    {
+      "service": "Cirugía Hepatobiliar",
+      "label": "Poshepatectomía",
+      "findings": [
+        "dolor abdominal",
+        "drenajes",
+        "sangrado",
+        "ictericia",
+        "náuseas",
+        "alteración de coagulación",
+        "fatiga",
+        "riesgo de insuficiencia hepática"
+      ]
+    },
+    {
+      "service": "Cirugía Hepatobiliar",
+      "label": "Posprocedimiento de Whipple",
+      "findings": [
+        "dolor abdominal",
+        "drenajes",
+        "náuseas",
+        "alteración glucémica",
+        "íleo",
+        "pérdida de peso",
+        "riesgo de fístula",
+        "riesgo de infección"
+      ]
+    },
+    {
+      "service": "Cirugía Hepatobiliar",
+      "label": "Colangitis aguda",
+      "findings": [
+        "fiebre",
+        "dolor en hipocondrio derecho",
+        "ictericia",
+        "hipotensión",
+        "confusión",
+        "náuseas",
+        "escalofríos",
+        "alteración de pruebas hepáticas"
+      ]
+    },
+    {
+      "service": "Cirugía Hepatobiliar",
+      "label": "Obstrucción biliar con stent o drenaje",
+      "findings": [
+        "ictericia",
+        "prurito",
+        "dolor abdominal",
+        "drenaje biliar",
+        "fiebre",
+        "náuseas",
+        "orina oscura",
+        "heces hipocolóricas"
+      ]
+    },
+    {
+      "service": "Cirugía Hepatobiliar",
+      "label": "Absceso hepático",
+      "findings": [
+        "fiebre",
+        "dolor en hipocondrio derecho",
+        "escalofríos",
+        "anorexia",
+        "fatiga",
+        "náuseas",
+        "leucocitosis",
+        "alteración hepática"
+      ]
+    },
+    {
+      "service": "Gastroenterología",
+      "label": "Brote de colitis ulcerativa",
+      "findings": [
+        "diarrea con sangre",
+        "dolor abdominal",
+        "urgencia fecal",
+        "tenesmo",
+        "fiebre",
+        "anemia",
+        "deshidratación",
+        "pérdida de peso"
+      ]
+    },
+    {
+      "service": "Gastroenterología",
+      "label": "Brote de enfermedad de Crohn",
+      "findings": [
+        "dolor abdominal",
+        "diarrea",
+        "pérdida de peso",
+        "fiebre",
+        "fatiga",
+        "fístulas",
+        "malabsorción",
+        "deshidratación"
+      ]
+    },
+    {
+      "service": "Gastroenterología",
+      "label": "Hemorragia digestiva activa",
+      "findings": [
+        "hematemesis o melena",
+        "taquicardia",
+        "hipotensión",
+        "palidez",
+        "mareo",
+        "diaforesis",
+        "dolor abdominal",
+        "disminución de hemoglobina"
+      ]
+    },
+    {
+      "service": "Gastroenterología",
+      "label": "Encefalopatía hepática",
+      "findings": [
+        "confusión",
+        "somnolencia",
+        "asterixis",
+        "desorientación",
+        "alteración de conducta",
+        "ictericia",
+        "ascitis",
+        "riesgo de aspiración"
+      ]
+    },
+    {
+      "service": "Gastroenterología",
+      "label": "Pancreatitis aguda severa",
+      "findings": [
+        "dolor epigástrico",
+        "náuseas",
+        "vómito",
+        "distensión",
+        "fiebre",
+        "taquicardia",
+        "hipotensión",
+        "alteración metabólica"
+      ]
+    },
+    {
+      "service": "Oftalmología",
+      "label": "Glaucoma agudo de ángulo cerrado",
+      "findings": [
+        "dolor ocular intenso",
+        "visión borrosa",
+        "halos",
+        "cefalea",
+        "náuseas",
+        "ojo rojo",
+        "pupila media fija",
+        "disminución visual"
+      ]
+    },
+    {
+      "service": "Oftalmología",
+      "label": "Desprendimiento de retina",
+      "findings": [
+        "destellos",
+        "miodesopsias",
+        "sombra o cortina visual",
+        "disminución de agudeza visual",
+        "ansiedad",
+        "ausencia de dolor",
+        "pérdida de campo visual",
+        "visión distorsionada"
+      ]
+    },
+    {
+      "service": "Oftalmología",
+      "label": "Trauma ocular",
+      "findings": [
+        "dolor ocular",
+        "sangrado",
+        "disminución visual",
+        "fotofobia",
+        "lagrimeo",
+        "edema",
+        "cuerpo extraño",
+        "deformidad ocular"
+      ]
+    },
+    {
+      "service": "Oftalmología",
+      "label": "Posoperatorio de catarata",
+      "findings": [
+        "visión borrosa esperada",
+        "molestia ocular",
+        "fotofobia leve",
+        "riesgo de infección",
+        "restricción de esfuerzo",
+        "ansiedad",
+        "necesidad de educación",
+        "protección ocular"
+      ]
+    },
+    {
+      "service": "Oftalmología",
+      "label": "Endoftalmitis",
+      "findings": [
+        "dolor ocular",
+        "disminución visual",
+        "ojo rojo",
+        "secreción",
+        "fotofobia",
+        "edema palpebral",
+        "fiebre ocasional",
+        "inflamación intraocular"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Anafilaxia",
+      "findings": [
+        "urticaria",
+        "angioedema",
+        "disnea",
+        "sibilancias",
+        "hipotensión",
+        "taquicardia",
+        "náuseas",
+        "alteración de conciencia"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Dolor torácico de alto riesgo",
+      "findings": [
+        "dolor torácico",
+        "disnea",
+        "diaforesis",
+        "náuseas",
+        "palpitaciones",
+        "hipotensión",
+        "ansiedad",
+        "cambios electrocardiográficos"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Abdomen agudo",
+      "findings": [
+        "dolor abdominal",
+        "defensa",
+        "distensión",
+        "náuseas",
+        "vómito",
+        "fiebre",
+        "taquicardia",
+        "alteración intestinal"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Crisis asmática severa",
+      "findings": [
+        "disnea",
+        "sibilancias",
+        "taquipnea",
+        "uso de músculos accesorios",
+        "hipoxemia",
+        "dificultad para hablar",
+        "ansiedad",
+        "fatiga respiratoria"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Intoxicación aguda",
+      "findings": [
+        "alteración de conciencia",
+        "náuseas",
+        "vómito",
+        "arritmias",
+        "convulsiones",
+        "alteración respiratoria",
+        "cambios pupilares",
+        "inestabilidad hemodinámica"
+      ]
+    },
+    {
+      "service": "Urgencias",
+      "label": "Código ictus / déficit neurológico agudo",
+      "findings": [
+        "hemiparesia",
+        "asimetría facial",
+        "afasia",
+        "disartria",
+        "alteración visual",
+        "ataxia",
+        "cefalea",
+        "alteración de conciencia"
+      ]
+    }
+  ]
+}
