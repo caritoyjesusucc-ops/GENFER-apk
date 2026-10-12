@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -165,9 +166,25 @@ public final class MainActivity extends Activity {
     private void render(boolean keepScroll) {
         int previous = keepScroll ? scroll.getScrollY() : 0;
         content.removeAllViews();
-        text(content, "✚ GENFER", 28, true);
-        text(content, "Hospitalización · PAE práctico · Java nativo", 13, false);
-        text(content, "Versión práctica: NOC con nivel al recibir y nivel esperado; NIC por selección directa. Validar institucionalmente antes de uso asistencial.", 12, false);
+        LinearLayout logos = new LinearLayout(this);
+        logos.setOrientation(LinearLayout.HORIZONTAL);
+        logos.setGravity(android.view.Gravity.CENTER);
+        ImageView genferLogo = new ImageView(this);
+        genferLogo.setImageResource(R.drawable.logo_genfer);
+        genferLogo.setAdjustViewBounds(true);
+        genferLogo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        logos.addView(genferLogo, new LinearLayout.LayoutParams(dp(110), dp(110)));
+        ImageView hudnLogo = new ImageView(this);
+        hudnLogo.setImageResource(R.drawable.logo_hudn);
+        hudnLogo.setAdjustViewBounds(true);
+        hudnLogo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        LinearLayout.LayoutParams hudnParams = new LinearLayout.LayoutParams(dp(150), dp(70));
+        hudnParams.setMargins(dp(16),0,0,0);
+        logos.addView(hudnLogo, hudnParams);
+        content.addView(logos);
+        text(content, "GENFER · Modelo de Atención de Enfermería", 25, true);
+        text(content, "Hospital Universitario Departamental de Nariño · PAE práctico multiservicios", 13, false);
+        text(content, "NOC: nivel al recibir y nivel esperado · NIC por selección directa · Validación institucional requerida.", 12, false);
         LinearLayout context = card("Caso SIM-001");
         button(context, "Fecha: " + state.optString("date"), false, this::chooseDate);
         select(context, "Turno", Arrays.asList("Mañana", "Tarde", "Noche"), state.optString("shift"), false,
@@ -177,6 +194,8 @@ public final class MainActivity extends Activity {
         select(context, "Patología / condición de ingreso", names, repo.condition(conditionId).optString("label"), false, value -> {
             conditionId = cs.optJSONObject(names.indexOf(value)).optString("id"); activeId = ""; step = 0; render(false);
         });
+        String service = repo.condition(conditionId).optString("service");
+        if (!service.isEmpty()) text(context, "Servicio / área: " + service, 13, true);
         JSONObject plans = map(state, "plans");
         if (plans.length() > 0) {
             LinearLayout selected = card("Plan del caso · " + plans.length());
@@ -207,7 +226,7 @@ public final class MainActivity extends Activity {
         button(files, "Eliminar borrador guardado", false, () -> confirm("Eliminar guardado", "Se eliminará el archivo local de simulación. La pantalla actual no cambia.", () -> {
             draftFile().delete(); Toast.makeText(this, "Borrador guardado eliminado", Toast.LENGTH_SHORT).show();
         }));
-        text(content, "Escala ordinal simplificada 1–5: 1 = mayor compromiso y 5 = mejor estado. No reemplaza valoración clínica ni taxonomías licenciadas.", 12, false);
+        text(content, "Escala Likert visual 1–5: rojo = mayor compromiso, naranja = compromiso importante, amarillo = moderado, verde claro = leve, verde = estado esperado. No reemplaza el juicio clínico.", 12, false);
         scroll.post(() -> scroll.scrollTo(0, previous));
     }
     private void go(int next) {
@@ -229,7 +248,9 @@ public final class MainActivity extends Activity {
     }
     private void selection() {
         JSONObject c = repo.condition(conditionId);
-        text(card("Hallazgos de referencia"), join(c.optJSONArray("findings")) + ". No se incorporan automáticamente al PES.", 14, false);
+        LinearLayout findingsCard = card("Signos, síntomas y hallazgos de referencia");
+        text(findingsCard, "Área: " + c.optString("service") + "\n" + join(c.optJSONArray("findings")) + ".", 14, false);
+        text(findingsCard, "Son hallazgos de apoyo; enfermería selecciona únicamente los presentes en el paciente.", 12, false);
         JSONArray ds = c.optJSONArray("diagnoses");
         for (int i = 0; i < ds.length(); i++) {
             JSONObject d = ds.optJSONObject(i); String id = d.optString("id"); LinearLayout box = card(d.optString("label"));
