@@ -1,0 +1,2544 @@
+{
+  "version": "4.0",
+  "count": 100,
+  "diagnoses": [
+    {
+      "id": "dx001",
+      "label": "Dolor agudo",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx002",
+      "label": "Gasto cardíaco comprometido",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx003",
+      "label": "Perfusión tisular periférica comprometida",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx004",
+      "label": "Intolerancia a la actividad",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx005",
+      "label": "Exceso de volumen de líquidos",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx006",
+      "label": "Riesgo de sangrado",
+      "type": "risk",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx007",
+      "label": "Riesgo de shock",
+      "type": "risk",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx008",
+      "label": "Riesgo de trombosis venosa",
+      "type": "risk",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx009",
+      "label": "Riesgo de perfusión cerebral comprometida",
+      "type": "risk",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx010",
+      "label": "Autogestión de la salud ineficaz",
+      "type": "actual",
+      "category": "cardio",
+      "factorOptions": [
+        "alteración hemodinámica asociada al proceso cardiovascular",
+        "cambios de precarga, poscarga o contractilidad",
+        "alteración del ritmo o frecuencia cardíaca",
+        "disminución de la perfusión sistémica",
+        "respuesta fisiológica al dolor, isquemia o procedimiento"
+      ],
+      "evidenceOptions": [
+        "hipotensión o hipertensión",
+        "taquicardia o bradicardia",
+        "piel fría o diaforética",
+        "oliguria",
+        "fatiga o debilidad",
+        "dolor torácico o disnea"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx011",
+      "label": "Intercambio gaseoso comprometido",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx012",
+      "label": "Patrón respiratorio ineficaz",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx013",
+      "label": "Limpieza de las vías aéreas ineficaz",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx014",
+      "label": "Ventilación espontánea comprometida",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx015",
+      "label": "Riesgo de aspiración",
+      "type": "risk",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx016",
+      "label": "Tos ineficaz",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx017",
+      "label": "Riesgo de deterioro respiratorio",
+      "type": "risk",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx018",
+      "label": "Fatiga respiratoria",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx019",
+      "label": "Intolerancia al decúbito",
+      "type": "actual",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [
+        "disnea",
+        "hipoxemia",
+        "taquipnea o bradipnea",
+        "uso de músculos accesorios",
+        "ruidos respiratorios adventicios",
+        "alteración gasométrica"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx020",
+      "label": "Riesgo de complicación asociada a ventilación mecánica",
+      "type": "risk",
+      "category": "resp",
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "retención de secreciones",
+        "aumento del trabajo respiratorio",
+        "alteración de la expansión pulmonar",
+        "fatiga de musculatura respiratoria"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx021",
+      "label": "Confusión aguda",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx022",
+      "label": "Movilidad física deteriorada",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx023",
+      "label": "Comunicación verbal deteriorada",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx024",
+      "label": "Deglución deteriorada",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx025",
+      "label": "Riesgo de lesión neurológica secundaria",
+      "type": "risk",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx026",
+      "label": "Riesgo de aumento de presión intracraneal",
+      "type": "risk",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx027",
+      "label": "Sensibilidad periférica alterada",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx028",
+      "label": "Control motor deteriorado",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx029",
+      "label": "Riesgo de convulsión recurrente",
+      "type": "risk",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx030",
+      "label": "Déficit de autocuidado",
+      "type": "actual",
+      "category": "neuro",
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "lesión estructural o vascular del sistema nervioso",
+        "alteración neuromuscular",
+        "disminución del nivel de conciencia",
+        "compromiso sensitivo o motor"
+      ],
+      "evidenceOptions": [
+        "desorientación o alteración de conciencia",
+        "déficit motor",
+        "déficit sensitivo",
+        "alteración pupilar",
+        "afasia o disartria",
+        "dificultad para deglutir"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx031",
+      "label": "Déficit de volumen de líquidos",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx032",
+      "label": "Riesgo de desequilibrio electrolítico",
+      "type": "risk",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx033",
+      "label": "Riesgo de glucemia inestable",
+      "type": "risk",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx034",
+      "label": "Eliminación urinaria deteriorada",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx035",
+      "label": "Retención urinaria",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx036",
+      "label": "Riesgo de lesión renal aguda",
+      "type": "risk",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx037",
+      "label": "Equilibrio ácido-base alterado",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx038",
+      "label": "Riesgo de crisis endocrina",
+      "type": "risk",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx039",
+      "label": "Hipertermia",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx040",
+      "label": "Hipotermia",
+      "type": "actual",
+      "category": "metabolic",
+      "factorOptions": [
+        "alteración del balance hídrico o electrolítico",
+        "disfunción renal o endocrina",
+        "pérdidas gastrointestinales o renales",
+        "cambios en aporte o metabolismo",
+        "tratamiento farmacológico o respuesta al estrés"
+      ],
+      "evidenceOptions": [
+        "mucosas secas o edema",
+        "oliguria o poliuria",
+        "alteración de glucemia",
+        "alteración de sodio, potasio o equilibrio ácido-base",
+        "cambios del estado mental",
+        "debilidad o arritmia"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx041",
+      "label": "Náuseas",
+      "type": "actual",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [
+        "dolor o distensión abdominal",
+        "náuseas o vómito",
+        "cambios en deposiciones",
+        "ruidos intestinales alterados",
+        "intolerancia oral",
+        "ictericia o cambios en pruebas hepáticas"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx042",
+      "label": "Diarrea",
+      "type": "actual",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [
+        "dolor o distensión abdominal",
+        "náuseas o vómito",
+        "cambios en deposiciones",
+        "ruidos intestinales alterados",
+        "intolerancia oral",
+        "ictericia o cambios en pruebas hepáticas"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx043",
+      "label": "Estreñimiento",
+      "type": "actual",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [
+        "dolor o distensión abdominal",
+        "náuseas o vómito",
+        "cambios en deposiciones",
+        "ruidos intestinales alterados",
+        "intolerancia oral",
+        "ictericia o cambios en pruebas hepáticas"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx044",
+      "label": "Motilidad gastrointestinal disfuncional",
+      "type": "actual",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [
+        "dolor o distensión abdominal",
+        "náuseas o vómito",
+        "cambios en deposiciones",
+        "ruidos intestinales alterados",
+        "intolerancia oral",
+        "ictericia o cambios en pruebas hepáticas"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx045",
+      "label": "Ingesta nutricional inadecuada",
+      "type": "actual",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [
+        "dolor o distensión abdominal",
+        "náuseas o vómito",
+        "cambios en deposiciones",
+        "ruidos intestinales alterados",
+        "intolerancia oral",
+        "ictericia o cambios en pruebas hepáticas"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx046",
+      "label": "Riesgo de desnutrición",
+      "type": "risk",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx047",
+      "label": "Riesgo de sangrado digestivo",
+      "type": "risk",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx048",
+      "label": "Riesgo de encefalopatía metabólica",
+      "type": "risk",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx049",
+      "label": "Riesgo de deterioro de la función hepática",
+      "type": "risk",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx050",
+      "label": "Riesgo de complicación biliar",
+      "type": "risk",
+      "category": "gi",
+      "factorOptions": [
+        "alteración gastrointestinal o hepatobiliar",
+        "inflamación, obstrucción o cirugía abdominal",
+        "cambios en motilidad digestiva",
+        "ayuno o ingesta insuficiente",
+        "alteración de absorción o metabolismo hepático"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx051",
+      "label": "Riesgo de infección",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx052",
+      "label": "Respuesta febril asociada a infección",
+      "type": "actual",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [
+        "fiebre o hipotermia",
+        "taquicardia",
+        "leucocitosis o leucopenia",
+        "eritema o exudado",
+        "escalofríos",
+        "deterioro hemodinámico"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx053",
+      "label": "Fatiga asociada a proceso sistémico",
+      "type": "actual",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [
+        "fiebre o hipotermia",
+        "taquicardia",
+        "leucocitosis o leucopenia",
+        "eritema o exudado",
+        "escalofríos",
+        "deterioro hemodinámico"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx054",
+      "label": "Riesgo de sepsis",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx055",
+      "label": "Riesgo de infección oportunista",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx056",
+      "label": "Riesgo de neutropenia complicada",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx057",
+      "label": "Riesgo de hemorragia por coagulopatía",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx058",
+      "label": "Riesgo de reacción transfusional",
+      "type": "risk",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx059",
+      "label": "Perfusión comprometida por anemia",
+      "type": "actual",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [
+        "fiebre o hipotermia",
+        "taquicardia",
+        "leucocitosis o leucopenia",
+        "eritema o exudado",
+        "escalofríos",
+        "deterioro hemodinámico"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx060",
+      "label": "Dolor asociado a crisis hematológica",
+      "type": "actual",
+      "category": "infection",
+      "factorOptions": [
+        "respuesta inflamatoria o infecciosa",
+        "inmunosupresión o neutropenia",
+        "presencia de dispositivos invasivos",
+        "pérdida de integridad de barreras",
+        "exposición a microorganismos o procedimiento"
+      ],
+      "evidenceOptions": [
+        "fiebre o hipotermia",
+        "taquicardia",
+        "leucocitosis o leucopenia",
+        "eritema o exudado",
+        "escalofríos",
+        "deterioro hemodinámico"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx061",
+      "label": "Integridad tisular deteriorada",
+      "type": "actual",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [
+        "dolor",
+        "edema o equimosis",
+        "limitación funcional",
+        "herida o drenaje",
+        "sangrado",
+        "alteración neurovascular distal"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx062",
+      "label": "Riesgo de integridad cutánea deteriorada",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx063",
+      "label": "Riesgo de lesión por presión",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx064",
+      "label": "Riesgo de compromiso neurovascular periférico",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx065",
+      "label": "Recuperación quirúrgica retrasada",
+      "type": "actual",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [
+        "dolor",
+        "edema o equimosis",
+        "limitación funcional",
+        "herida o drenaje",
+        "sangrado",
+        "alteración neurovascular distal"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx066",
+      "label": "Riesgo de dehiscencia de herida",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx067",
+      "label": "Riesgo de infección del sitio quirúrgico",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx068",
+      "label": "Riesgo de complicación por drenajes o dispositivos",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx069",
+      "label": "Riesgo de hipotermia perioperatoria",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx070",
+      "label": "Riesgo de caída",
+      "type": "risk",
+      "category": "surgical",
+      "factorOptions": [
+        "trauma o procedimiento quirúrgico",
+        "inmovilidad o dispositivo de soporte",
+        "incisión, herida o drenaje",
+        "alteración de perfusión local",
+        "efecto anestésico o posoperatorio"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx071",
+      "label": "Ansiedad",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx072",
+      "label": "Temor",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx073",
+      "label": "Afrontamiento ineficaz",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx074",
+      "label": "Confort deteriorado",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx075",
+      "label": "Dolor crónico",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx076",
+      "label": "Sueño deteriorado",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx077",
+      "label": "Imagen corporal alterada",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx078",
+      "label": "Riesgo de duelo complicado",
+      "type": "risk",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx079",
+      "label": "Apoyo social insuficiente",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx080",
+      "label": "Conocimiento insuficiente del régimen terapéutico",
+      "type": "actual",
+      "category": "psycho",
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "hospitalización o procedimiento",
+        "cambios de imagen corporal o función",
+        "incertidumbre sobre evolución",
+        "recursos de afrontamiento insuficientes"
+      ],
+      "evidenceOptions": [
+        "preocupación o temor expresado",
+        "inquietud",
+        "insomnio",
+        "dificultad para concentrarse",
+        "conductas de afrontamiento ineficaces",
+        "malestar emocional"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx081",
+      "label": "Riesgo de alteración de la díada materno-fetal",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx082",
+      "label": "Riesgo de perfusión uteroplacentaria ineficaz",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx083",
+      "label": "Riesgo de hemorragia obstétrica",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx084",
+      "label": "Riesgo de infección puerperal",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx085",
+      "label": "Dolor obstétrico agudo",
+      "type": "actual",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [
+        "sangrado vaginal",
+        "dolor pélvico o abdominal",
+        "hipertensión",
+        "alteración del bienestar fetal",
+        "contracciones uterinas",
+        "cambios en estado materno"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx086",
+      "label": "Riesgo de convulsión obstétrica",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx087",
+      "label": "Riesgo de parto pretérmino",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx088",
+      "label": "Riesgo de lesión materna",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx089",
+      "label": "Riesgo de compromiso fetal",
+      "type": "risk",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx090",
+      "label": "Recuperación posparto alterada",
+      "type": "actual",
+      "category": "maternal",
+      "factorOptions": [
+        "complicación obstétrica",
+        "alteración placentaria o uterina",
+        "hipertensión o hemorragia materna",
+        "infección durante embarazo o puerperio",
+        "trabajo de parto o procedimiento obstétrico"
+      ],
+      "evidenceOptions": [
+        "sangrado vaginal",
+        "dolor pélvico o abdominal",
+        "hipertensión",
+        "alteración del bienestar fetal",
+        "contracciones uterinas",
+        "cambios en estado materno"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx091",
+      "label": "Percepción visual alterada",
+      "type": "actual",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [
+        "dolor o malestar",
+        "cambios funcionales",
+        "alteración de pruebas de laboratorio",
+        "fatiga",
+        "cambios en percepción sensorial",
+        "limitación de actividades"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx092",
+      "label": "Riesgo de pérdida visual aguda",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx093",
+      "label": "Riesgo de infección ocular",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx094",
+      "label": "Riesgo de toxicidad por tratamiento oncológico",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx095",
+      "label": "Integridad de mucosa deteriorada",
+      "type": "actual",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [
+        "dolor o malestar",
+        "cambios funcionales",
+        "alteración de pruebas de laboratorio",
+        "fatiga",
+        "cambios en percepción sensorial",
+        "limitación de actividades"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx096",
+      "label": "Fatiga relacionada con tratamiento oncológico",
+      "type": "actual",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [
+        "dolor o malestar",
+        "cambios funcionales",
+        "alteración de pruebas de laboratorio",
+        "fatiga",
+        "cambios en percepción sensorial",
+        "limitación de actividades"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx097",
+      "label": "Dolor neuropático",
+      "type": "actual",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [
+        "dolor o malestar",
+        "cambios funcionales",
+        "alteración de pruebas de laboratorio",
+        "fatiga",
+        "cambios en percepción sensorial",
+        "limitación de actividades"
+      ],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx098",
+      "label": "Riesgo de deterioro multiorgánico",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx099",
+      "label": "Riesgo de delirium en cuidado crítico",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    },
+    {
+      "id": "dx100",
+      "label": "Riesgo de deterioro de la autonomía funcional",
+      "type": "risk",
+      "category": "specialty",
+      "factorOptions": [
+        "enfermedad crónica o tratamiento especializado",
+        "toxicidad o efecto adverso del tratamiento",
+        "alteración sensorial o funcional",
+        "progresión de enfermedad",
+        "intervención diagnóstica o terapéutica"
+      ],
+      "evidenceOptions": [],
+      "validation": {
+        "status": "pending",
+        "note": "Diagnóstico/problema de enfermería propuesto para matriz GENFER; validar institucionalmente contra taxonomías licenciadas vigentes."
+      }
+    }
+  ],
+  "serviceDiagnosisMap": {
+    "Medicina Interna": [
+      "dx004",
+      "dx005",
+      "dx010",
+      "dx021",
+      "dx031",
+      "dx032",
+      "dx041",
+      "dx045",
+      "dx053",
+      "dx080"
+    ],
+    "Hematología": [
+      "dx051",
+      "dx056",
+      "dx057",
+      "dx058",
+      "dx059",
+      "dx060",
+      "dx006",
+      "dx053",
+      "dx045",
+      "dx074"
+    ],
+    "Infectología": [
+      "dx051",
+      "dx052",
+      "dx054",
+      "dx055",
+      "dx031",
+      "dx039",
+      "dx021",
+      "dx053",
+      "dx007",
+      "dx074"
+    ],
+    "Reumatología": [
+      "dx001",
+      "dx004",
+      "dx022",
+      "dx045",
+      "dx053",
+      "dx073",
+      "dx075",
+      "dx076",
+      "dx079",
+      "dx100"
+    ],
+    "Endocrinología": [
+      "dx031",
+      "dx032",
+      "dx033",
+      "dx036",
+      "dx037",
+      "dx038",
+      "dx039",
+      "dx021",
+      "dx045",
+      "dx080"
+    ],
+    "Cuidado Intensivo": [
+      "dx007",
+      "dx011",
+      "dx014",
+      "dx017",
+      "dx020",
+      "dx021",
+      "dx026",
+      "dx032",
+      "dx054",
+      "dx098"
+    ],
+    "Ginecooncología": [
+      "dx061",
+      "dx065",
+      "dx067",
+      "dx071",
+      "dx073",
+      "dx077",
+      "dx094",
+      "dx096",
+      "dx045",
+      "dx100"
+    ],
+    "Medicina del Dolor": [
+      "dx001",
+      "dx075",
+      "dx097",
+      "dx071",
+      "dx073",
+      "dx074",
+      "dx076",
+      "dx079",
+      "dx004",
+      "dx080"
+    ],
+    "Oncología": [
+      "dx051",
+      "dx056",
+      "dx094",
+      "dx095",
+      "dx096",
+      "dx045",
+      "dx046",
+      "dx071",
+      "dx073",
+      "dx077"
+    ],
+    "Radiooncología": [
+      "dx061",
+      "dx062",
+      "dx095",
+      "dx096",
+      "dx075",
+      "dx041",
+      "dx045",
+      "dx071",
+      "dx074",
+      "dx077"
+    ],
+    "Cirugía Hepatobiliar": [
+      "dx001",
+      "dx041",
+      "dx044",
+      "dx047",
+      "dx049",
+      "dx050",
+      "dx061",
+      "dx067",
+      "dx068",
+      "dx065"
+    ],
+    "Gastroenterología": [
+      "dx041",
+      "dx042",
+      "dx043",
+      "dx044",
+      "dx045",
+      "dx046",
+      "dx047",
+      "dx048",
+      "dx049",
+      "dx031"
+    ],
+    "Oftalmología": [
+      "dx091",
+      "dx092",
+      "dx093",
+      "dx001",
+      "dx071",
+      "dx072",
+      "dx074",
+      "dx080",
+      "dx100",
+      "dx061"
+    ],
+    "Urgencias": [
+      "dx001",
+      "dx007",
+      "dx011",
+      "dx017",
+      "dx021",
+      "dx031",
+      "dx032",
+      "dx051",
+      "dx054",
+      "dx070"
+    ],
+    "Cardiovascular": [
+      "dx001",
+      "dx002",
+      "dx003",
+      "dx004",
+      "dx005",
+      "dx006",
+      "dx007",
+      "dx008",
+      "dx009",
+      "dx010"
+    ],
+    "Neurología": [
+      "dx021",
+      "dx022",
+      "dx023",
+      "dx024",
+      "dx025",
+      "dx026",
+      "dx027",
+      "dx028",
+      "dx029",
+      "dx030"
+    ],
+    "Neumología": [
+      "dx011",
+      "dx012",
+      "dx013",
+      "dx014",
+      "dx015",
+      "dx016",
+      "dx017",
+      "dx018",
+      "dx019",
+      "dx020"
+    ],
+    "Metabólico / Endocrino": [
+      "dx031",
+      "dx032",
+      "dx033",
+      "dx034",
+      "dx035",
+      "dx036",
+      "dx037",
+      "dx038",
+      "dx039",
+      "dx040"
+    ],
+    "Renal / Urología": [
+      "dx031",
+      "dx032",
+      "dx034",
+      "dx035",
+      "dx036",
+      "dx005",
+      "dx041",
+      "dx045",
+      "dx051",
+      "dx100"
+    ],
+    "Digestivo / Hepatobiliar": [
+      "dx041",
+      "dx042",
+      "dx043",
+      "dx044",
+      "dx045",
+      "dx046",
+      "dx047",
+      "dx048",
+      "dx049",
+      "dx050"
+    ],
+    "Infeccioso": [
+      "dx051",
+      "dx052",
+      "dx053",
+      "dx054",
+      "dx055",
+      "dx056",
+      "dx057",
+      "dx058",
+      "dx059",
+      "dx060"
+    ],
+    "Hematología / Oncología": [
+      "dx051",
+      "dx056",
+      "dx057",
+      "dx058",
+      "dx059",
+      "dx060",
+      "dx094",
+      "dx095",
+      "dx096",
+      "dx077"
+    ],
+    "Trauma": [
+      "dx001",
+      "dx006",
+      "dx007",
+      "dx061",
+      "dx062",
+      "dx064",
+      "dx068",
+      "dx069",
+      "dx070",
+      "dx098"
+    ],
+    "Ortopedia": [
+      "dx001",
+      "dx022",
+      "dx061",
+      "dx063",
+      "dx064",
+      "dx065",
+      "dx067",
+      "dx070",
+      "dx075",
+      "dx100"
+    ],
+    "Neurocirugía": [
+      "dx021",
+      "dx022",
+      "dx023",
+      "dx024",
+      "dx025",
+      "dx026",
+      "dx029",
+      "dx030",
+      "dx063",
+      "dx070"
+    ],
+    "Cirugía general": [
+      "dx001",
+      "dx041",
+      "dx044",
+      "dx061",
+      "dx065",
+      "dx066",
+      "dx067",
+      "dx068",
+      "dx069",
+      "dx070"
+    ],
+    "Cirugía oncológica": [
+      "dx001",
+      "dx045",
+      "dx061",
+      "dx065",
+      "dx067",
+      "dx071",
+      "dx073",
+      "dx077",
+      "dx094",
+      "dx096"
+    ],
+    "Cirugía de tórax / Neumología": [
+      "dx011",
+      "dx012",
+      "dx013",
+      "dx014",
+      "dx017",
+      "dx061",
+      "dx065",
+      "dx067",
+      "dx068",
+      "dx075"
+    ],
+    "Radiología intervencionista": [
+      "dx001",
+      "dx003",
+      "dx006",
+      "dx031",
+      "dx034",
+      "dx051",
+      "dx061",
+      "dx068",
+      "dx070",
+      "dx091"
+    ],
+    "Quirófano / Recuperación": [
+      "dx001",
+      "dx015",
+      "dx031",
+      "dx035",
+      "dx061",
+      "dx066",
+      "dx067",
+      "dx069",
+      "dx070",
+      "dx074"
+    ],
+    "Materno / Urgencias obstétricas": [
+      "dx081",
+      "dx082",
+      "dx083",
+      "dx084",
+      "dx085",
+      "dx086",
+      "dx087",
+      "dx088",
+      "dx089",
+      "dx090"
+    ]
+  }
+}
