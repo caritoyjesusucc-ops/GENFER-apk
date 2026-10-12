@@ -7,8 +7,8 @@ android {
         applicationId 'com.genfer.pae'
         minSdk 26
         targetSdk 35
-        versionCode 3
-        versionName '3.0-multiservicios'
+        versionCode 4
+        versionName '3.2-pes-pdf'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
