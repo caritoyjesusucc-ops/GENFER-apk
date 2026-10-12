@@ -17,6 +17,7 @@ import java.util.Locale;
 /** Catálogo local y modelo del borrador. Sin transmisión a servidores. */
 public final class PlanRepository {
     public final JSONObject catalog;
+    private final JSONObject servicePools;
     public PlanRepository(Context context) throws Exception {
         try (InputStream in = context.getAssets().open("catalogo.json")) {
             catalog = new JSONObject(read(in));
@@ -24,6 +25,10 @@ public final class PlanRepository {
         try (InputStream in = context.getAssets().open("enrichment.json")) {
             applyEnrichment(new JSONObject(read(in)));
         }
+        try (InputStream in = context.getAssets().open("service_pools.json")) {
+            servicePools = new JSONObject(read(in)).optJSONObject("services");
+        }
+        registerPoolDefinitions();
     }
     private void applyEnrichment(JSONObject enrichment) {
         JSONObject byLabel = enrichment.optJSONObject("diagnoses");
@@ -47,6 +52,49 @@ public final class PlanRepository {
         List<String> values = strings(array(target, key));
         for (String value : strings(extra)) if (!values.contains(value)) values.add(value);
         put(target, key, new JSONArray(values));
+    }
+    private void registerPoolDefinitions() {
+        if (servicePools == null) return;
+        JSONObject outcomes = map(catalog, "outcomes"), interventions = map(catalog, "interventions");
+        for (String service : keys(servicePools)) {
+            JSONObject pool = servicePools.optJSONObject(service);
+            for (String name : strings(pool.optJSONArray("noc"))) if (!outcomes.has(name)) put(outcomes, name, obj("profile", "generic"));
+            for (String name : strings(pool.optJSONArray("nic"))) if (!interventions.has(name)) put(interventions, name, new JSONArray());
+        }
+    }
+    public List<String> conditionNocOptions(String conditionId) {
+        JSONObject c = condition(conditionId);
+        List<String> out = new ArrayList<>();
+        JSONArray ds = c.optJSONArray("diagnoses");
+        for (int i = 0; i < ds.length(); i++) for (String name : strings(ds.optJSONObject(i).optJSONArray("noc"))) if (!out.contains(name)) out.add(name);
+        if (servicePools != null) {
+            JSONObject pool = servicePools.optJSONObject(c.optString("service"));
+            if (pool != null) for (String name : strings(pool.optJSONArray("noc"))) if (!out.contains(name)) out.add(name);
+        }
+        while (out.size() > 10) out.remove(out.size() - 1);
+        return out;
+    }
+    public List<String> conditionNicOptions(String conditionId) {
+        JSONObject c = condition(conditionId);
+        List<String> out = new ArrayList<>();
+        JSONArray ds = c.optJSONArray("diagnoses");
+        for (int i = 0; i < ds.length(); i++) for (String name : strings(ds.optJSONObject(i).optJSONArray("nic"))) if (!out.contains(name)) out.add(name);
+        if (servicePools != null) {
+            JSONObject pool = servicePools.optJSONObject(c.optString("service"));
+            if (pool != null) for (String name : strings(pool.optJSONArray("nic"))) if (!out.contains(name)) out.add(name);
+        }
+        while (out.size() > 20) out.remove(out.size() - 1);
+        return out;
+    }
+    public List<String> evidenceOptions(String conditionId, String diagnosisId) {
+        JSONObject d = diagnosis(diagnosisId), c = condition(conditionId);
+        List<String> out = new ArrayList<>();
+        for (String value : strings(d.optJSONArray("evidenceOptions"))) if (!out.contains(value)) out.add(value);
+        if (!"risk".equals(d.optString("type"))) {
+            for (String value : strings(c.optJSONArray("findings"))) if (!out.contains(value)) out.add(value);
+        }
+        while (out.size() > 15) out.remove(out.size() - 1);
+        return out;
     }
     public static String read(InputStream in) throws Exception {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -99,7 +147,7 @@ public final class PlanRepository {
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss XXX", Locale.US).format(new Date());
     }
     public static JSONObject newState() {
-        return obj("version", 2, "caseId", "SIM-001", "date",
+        return obj("version", 2, "caseId", "SIM-001", "patientName", "", "patientId", "", "date",
                 new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date()),
                 "shift", "Mañana", "plans", new JSONObject());
     }
@@ -203,8 +251,10 @@ public final class PlanRepository {
     public String summary(JSONObject state) {
         StringBuilder s = new StringBuilder("GENFER · PLAN DE CUIDADOS DE HOSPITALIZACIÓN\n");
         s.append("PROTOTIPO PARA VALIDACIÓN INSTITUCIONAL — NO SUSTITUYE EL JUICIO CLÍNICO\n");
-        s.append(state.optString("caseId", "SIM-001")).append(" · ").append(state.optString("date")).append(" · ").append(state.optString("shift"));
-        s.append("\nEscala ordinal simplificada 1–5: 1 = mayor compromiso; 5 = mejor estado.\n");
+        s.append("Paciente: ").append(state.optString("patientName").isEmpty() ? "Sin registrar" : state.optString("patientName")).append("\n");
+        s.append("Identificación: ").append(state.optString("patientId").isEmpty() ? "Sin registrar" : state.optString("patientId")).append("\n");
+        s.append("Fecha: ").append(state.optString("date")).append(" · Turno: ").append(state.optString("shift")).append("\n");
+        s.append("Escala ordinal 1–5: 1 = mayor compromiso; 5 = mejor estado.\n");
         JSONObject plans = map(state, "plans");
         if (plans.length() == 0) s.append("\nSin diagnósticos añadidos.\n");
         for (String id : keys(plans)) {
