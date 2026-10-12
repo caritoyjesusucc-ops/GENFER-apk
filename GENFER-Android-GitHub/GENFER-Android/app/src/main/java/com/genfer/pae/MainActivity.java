@@ -166,8 +166,8 @@ public final class MainActivity extends Activity {
         int previous = keepScroll ? scroll.getScrollY() : 0;
         content.removeAllViews();
         text(content, "✚ GENFER", 28, true);
-        text(content, "Hospitalización · Simulación · Java nativo", 13, false);
-        text(content, "Solo datos ficticios. Catálogo, enlaces y anclajes pendientes de validación institucional.", 12, false);
+        text(content, "Hospitalización · PAE práctico · Java nativo", 13, false);
+        text(content, "Versión práctica: NOC con nivel al recibir y nivel esperado; NIC por selección directa. Validar institucionalmente antes de uso asistencial.", 12, false);
         LinearLayout context = card("Caso SIM-001");
         button(context, "Fecha: " + state.optString("date"), false, this::chooseDate);
         select(context, "Turno", Arrays.asList("Mañana", "Tarde", "Noche"), state.optString("shift"), false,
@@ -186,7 +186,7 @@ public final class MainActivity extends Activity {
         }
         HorizontalScrollView tabs = new HorizontalScrollView(this);
         LinearLayout row = new LinearLayout(this); row.setOrientation(LinearLayout.HORIZONTAL); tabs.addView(row); content.addView(tabs);
-        String[] labels = {"1. Selección", "2. PES", "3. NOC / NIC", "4. Turno", "5. Resumen"};
+        String[] labels = {"1. Selección", "2. PES", "3. NOC / NIC", "4. Resumen"};
         for (int i = 0; i < labels.length; i++) {
             final int index = i; Button b = new Button(this); b.setText(labels[i]); b.setAllCaps(false);
             b.setTextColor(i == step ? Color.WHITE : TEAL); b.setBackground(background(i == step ? TEAL : Color.WHITE, false));
@@ -194,11 +194,10 @@ public final class MainActivity extends Activity {
             b.setOnClickListener(v -> go(index));
         }
         if (step == 0) selection();
-        else if (step == 4) summaryView();
+        else if (step == 3) summaryView();
         else if (plan() == null) text(card("Selecciona un diagnóstico"), "Añádelo desde Selección o abre uno del plan del caso.", 15, false);
         else if (step == 1) diagnosisView();
-        else if (step == 2) planningView();
-        else turnView();
+        else planningView();
         LinearLayout files = card("Borrador local de simulación");
         button(files, "Guardar borrador en este celular", false, this::saveDraft);
         button(files, "Abrir borrador guardado", false, () -> confirm("Abrir borrador", "Reemplazará las selecciones en pantalla por el último borrador guardado.", this::loadDraft));
@@ -208,7 +207,7 @@ public final class MainActivity extends Activity {
         button(files, "Eliminar borrador guardado", false, () -> confirm("Eliminar guardado", "Se eliminará el archivo local de simulación. La pantalla actual no cambia.", () -> {
             draftFile().delete(); Toast.makeText(this, "Borrador guardado eliminado", Toast.LENGTH_SHORT).show();
         }));
-        text(content, "Escala 1–5 ilustrativa. El color no es triaje. Sin inicio de sesión, firma clínica ni historia de turnos.", 12, false);
+        text(content, "Escala ordinal simplificada 1–5: 1 = mayor compromiso y 5 = mejor estado. No reemplaza valoración clínica ni taxonomías licenciadas.", 12, false);
         scroll.post(() -> scroll.scrollTo(0, previous));
     }
     private void go(int next) {
@@ -296,39 +295,27 @@ public final class MainActivity extends Activity {
     private void planningView() {
         JSONObject p=plan(),d=repo.diagnosis(activeId);
         LinearLayout header=card(d.optString("label"));
-        text(header,"Escala ordinal ilustrativa de cinco puntos: mayor número = mejor estado. No es una escala NOC oficial. Cada indicador tiene sus descripciones.",13,false);
+        text(header,"NOC práctico: selecciona únicamente cómo recibes al paciente y a qué nivel quieres llevarlo. 1 = mayor compromiso; 5 = mejor estado.",13,false);
         LinearLayout choices=card("Resultados NOC propuestos");
         JSONObject outcomes=map(p,"nocs");
         for(String name:strings(d.optJSONArray("noc"))) check(choices,name,outcomes.has(name),checked -> {
             if(checked){put(outcomes,name,repo.newOutcome(name));render(true);}
-            else confirm("Retirar resultado","Se borrarán sus selecciones y evaluación de la pantalla.",() -> {outcomes.remove(name);render(true);});
+            else confirm("Retirar resultado","Se borrarán los niveles seleccionados para este NOC.",() -> {outcomes.remove(name);render(true);});
         });
         for(String name:keys(outcomes)) {
             JSONObject r=outcomes.optJSONObject(name); LinearLayout box=card(name);
-            select(box,"Indicador predeterminado",strings(repo.catalog.optJSONObject("outcomes").optJSONObject(name).optJSONArray("indicators")),r.optString("indicator"),true,value -> {
-                put(r,"indicator",value);put(r,"baseline",0);put(r,"target",0);resetEvaluation(r);render(true);
-            });
-            score(box,r,"baseline","Estado inicial"); score(box,r,"target","Meta esperada");
-            select(box,"Plazo de evaluación",options("deadlines"),r.optString("deadline"),true,value -> {
-                put(r,"deadline",value);resetEvaluation(r);render(true);
-            });
+            score(box,r,"baseline","Nivel al recibir al paciente");
+            score(box,r,"target","Nivel esperado / objetivo");
             text(box,repo.goal(r),15,true);
         }
-        LinearLayout nics=card("Intervenciones NIC propuestas"); JSONObject interventions=map(p,"nics");
+        LinearLayout nics=card("Intervenciones NIC propuestas · selección directa");
+        text(nics,"Marca únicamente las intervenciones que correspondan al paciente. No necesitas diligenciar actividades, horario ni responsable en esta versión.",12,false);
+        JSONObject interventions=map(p,"nics");
         for(String name:strings(d.optJSONArray("nic"))) check(nics,name,interventions.has(name),checked -> {
-            if(checked){put(interventions,name,newIntervention());render(true);}
-            else confirm("Retirar intervención","Se borrarán sus actividades y registros de la pantalla.",() -> {interventions.remove(name);render(true);});
+            if(checked){put(interventions,name,newIntervention());}
+            else interventions.remove(name);
         });
-        for(String name:keys(interventions)) {
-            JSONObject r=interventions.optJSONObject(name); LinearLayout box=card(name);
-            text(box,"Selecciona actividades aplicables según competencia, indicación y protocolo.",12,false);
-            for(String value:strings(repo.catalog.optJSONObject("interventions").optJSONArray(name))) check(box,value,contains(array(r,"activities"),value),checked -> {
-                toggle(r,"activities",value,checked);resetExecution(r);
-            });
-            select(box,"Programación",options("schedules"),r.optString("schedule"),true,value -> {put(r,"schedule",value);resetExecution(r);});
-            select(box,"Responsable / rol",options("responsibles"),r.optString("responsible"),true,value -> {put(r,"responsible",value);resetExecution(r);});
-        }
-        button(content,"Registrar turno y reevaluar",true,() -> go(3));
+        button(content,"Ver resumen del plan",true,() -> go(3));
     }
     private void progress(LinearLayout box,JSONObject r) {
         text(box,"Inicial: "+repo.scoreText(r,"baseline")+"\nMeta: "+repo.scoreText(r,"target"),14,false);
@@ -368,21 +355,23 @@ public final class MainActivity extends Activity {
         button(box,"Ver todas las metas y el resumen",true,() -> go(4));
     }
     private void summaryView() {
-        JSONObject plans=map(state,"plans");int total=0,met=0,pending=0;
-        for(String id:keys(plans)) for(String name:keys(map(plans.optJSONObject(id),"nocs"))) {
-            JSONObject r=map(plans.optJSONObject(id),"nocs").optJSONObject(name);total++;
-            if("Meta alcanzada".equals(comparison(r)))met++;
-            if("Pendiente".equals(r.optString("evaluationState")))pending++;
+        JSONObject plans=map(state,"plans");
+        LinearLayout header=card("Resumen práctico del PAE");
+        text(header,plans.length()+" diagnóstico(s) de enfermería seleccionado(s)",20,true);
+        text(header,"Cada NOC muestra solo dos datos: nivel al recibir y nivel esperado. Los NIC se muestran como intervenciones seleccionadas.",13,false);
+        for(String id:keys(plans)) {
+            JSONObject p=plans.optJSONObject(id);
+            LinearLayout box=card(repo.diagnosis(id).optString("label"));
+            text(box,"Diagnóstico médico: "+repo.condition(p.optString("conditionId")).optString("label"),13,false);
+            text(box,repo.formulation(p),15,true);
+            for(String name:keys(map(p,"nocs"))) {
+                JSONObject r=map(p,"nocs").optJSONObject(name);
+                text(box,"NOC · "+name+"\nRecibo: "+repo.scoreText(r,"baseline")+"\nQuiero: "+repo.scoreText(r,"target"),14,false);
+            }
+            if(map(p,"nics").length()>0) text(box,"NIC · "+String.join(" · ",keys(map(p,"nics"))),14,true);
         }
-        LinearLayout header=card("Panel de metas");
-        text(header,met+" / "+total+" metas alcanzadas según puntuación seleccionada\n"+pending+" pendientes de evaluar",20,true);
-        text(header,"Sin promedios entre escalas. El color describe el indicador, no el riesgo clínico global.",13,false);
-        for(String id:keys(plans)) for(String name:keys(map(plans.optJSONObject(id),"nocs"))) {
-            LinearLayout box=card(name);text(box,repo.diagnosis(id).optString("label"),12,false);
-            progress(box,map(plans.optJSONObject(id),"nocs").optJSONObject(name));
-        }
-        button(header,"Exportar resumen TXT",true,() -> export(repo.summary(state),"text/plain","GENFER-SIM-001.txt"));
-        button(header,"Exportar datos JSON",false,() -> export(repo.exportJson(state),"application/json","GENFER-SIM-001.json"));
+        button(header,"Exportar resumen TXT",true,() -> export(repo.summary(state),"text/plain","GENFER-PAE.txt"));
+        button(header,"Exportar datos JSON",false,() -> export(repo.exportJson(state),"application/json","GENFER-PAE.json"));
         text(card("Resumen para revisión"),repo.summary(state),13,false);
     }
     private AtomicFile draftFile() { return new AtomicFile(new File(getFilesDir(),"genfer-simulacion.json")); }
@@ -394,7 +383,7 @@ public final class MainActivity extends Activity {
         } catch(Exception e) {if(output!=null)file.failWrite(output);message("No se pudo guardar",e.getMessage());return false;}
     }
     private void validateState(JSONObject candidate) {
-        if(candidate.optInt("version")!=1 || candidate.optJSONObject("plans")==null) throw new IllegalArgumentException("Versión o estructura de borrador no compatible");
+        if(candidate.optInt("version")!=2 || candidate.optJSONObject("plans")==null) throw new IllegalArgumentException("Versión o estructura de borrador no compatible");
         JSONObject plans=map(candidate,"plans");
         for(String id:keys(plans)) {
             JSONObject p=plans.optJSONObject(id);if(p==null)throw new IllegalArgumentException("Plan inválido");
@@ -415,7 +404,7 @@ public final class MainActivity extends Activity {
     private void loadDraft() {
         try(InputStream in=draftFile().openRead()) {
             JSONObject loaded=new JSONObject(read(in));validateState(loaded);state=loaded;
-            activeId="";conditionId="c1";step=4;render(false);
+            activeId="";conditionId="c1";step=3;render(false);
         } catch(Exception e) {message("No se pudo abrir el borrador","Guarda primero una simulación.\n"+e.getMessage());}
     }
     private void export(String data,String mime,String filename) {
