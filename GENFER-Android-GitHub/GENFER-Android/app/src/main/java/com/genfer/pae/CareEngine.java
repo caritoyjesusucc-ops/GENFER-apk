@@ -21,11 +21,11 @@ public final class CareEngine {
     }
     public static int scoreColor(int score) {
         switch (score) {
-            case 1: return 0xFFF9E6E4;
-            case 2: return 0xFFFAECDD;
-            case 3: return 0xFFF8F2D1;
-            case 4: return 0xFFEDF1D9;
-            case 5: return 0xFFDEEEE3;
+            case 1: return 0xFFFFC7C7;
+            case 2: return 0xFFFFD7A8;
+            case 3: return 0xFFFFE88A;
+            case 4: return 0xFFD9F0A3;
+            case 5: return 0xFFB7E4C7;
             default: return 0xFFEDF0F0;
         }
     }
