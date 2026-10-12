@@ -21,6 +21,32 @@ public final class PlanRepository {
         try (InputStream in = context.getAssets().open("catalogo.json")) {
             catalog = new JSONObject(read(in));
         }
+        try (InputStream in = context.getAssets().open("enrichment.json")) {
+            applyEnrichment(new JSONObject(read(in)));
+        }
+    }
+    private void applyEnrichment(JSONObject enrichment) {
+        JSONObject byLabel = enrichment.optJSONObject("diagnoses");
+        if (byLabel == null) return;
+        JSONArray conditions = catalog.optJSONArray("conditions");
+        for (int i = 0; i < conditions.length(); i++) {
+            JSONArray diagnoses = conditions.optJSONObject(i).optJSONArray("diagnoses");
+            for (int j = 0; j < diagnoses.length(); j++) {
+                JSONObject d = diagnoses.optJSONObject(j);
+                JSONObject extra = byLabel.optJSONObject(d.optString("label"));
+                if (extra == null) continue;
+                JSONArray factors = extra.optJSONArray("factorOptions");
+                if (factors != null && factors.length() > 0) put(d, "factorOptions", factors);
+                mergeUnique(d, "noc", extra.optJSONArray("nocExtra"));
+                mergeUnique(d, "nic", extra.optJSONArray("nicExtra"));
+            }
+        }
+    }
+    private static void mergeUnique(JSONObject target, String key, JSONArray extra) {
+        if (extra == null) return;
+        List<String> values = strings(array(target, key));
+        for (String value : strings(extra)) if (!values.contains(value)) values.add(value);
+        put(target, key, new JSONArray(values));
     }
     public static String read(InputStream in) throws Exception {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();

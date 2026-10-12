@@ -5,7 +5,13 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.pdf.PdfDocument;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
@@ -21,6 +27,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -28,6 +35,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -47,6 +55,7 @@ public final class MainActivity extends Activity {
     private PlanRepository repo;
     private JSONObject state;
     private String conditionId = "c1", activeId = "", pendingExport;
+    private byte[] pendingPdf;
     private int step;
     private ScrollView scroll;
     private LinearLayout content;
@@ -165,9 +174,25 @@ public final class MainActivity extends Activity {
     private void render(boolean keepScroll) {
         int previous = keepScroll ? scroll.getScrollY() : 0;
         content.removeAllViews();
-        text(content, "✚ GENFER", 28, true);
-        text(content, "Hospitalización · PAE práctico · Java nativo", 13, false);
-        text(content, "Versión práctica: NOC con nivel al recibir y nivel esperado; NIC por selección directa. Validar institucionalmente antes de uso asistencial.", 12, false);
+        LinearLayout logos = new LinearLayout(this);
+        logos.setOrientation(LinearLayout.HORIZONTAL);
+        logos.setGravity(android.view.Gravity.CENTER);
+        ImageView genferLogo = new ImageView(this);
+        genferLogo.setImageResource(R.drawable.logo_genfer);
+        genferLogo.setAdjustViewBounds(true);
+        genferLogo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        logos.addView(genferLogo, new LinearLayout.LayoutParams(dp(110), dp(110)));
+        ImageView hudnLogo = new ImageView(this);
+        hudnLogo.setImageResource(R.drawable.logo_hudn);
+        hudnLogo.setAdjustViewBounds(true);
+        hudnLogo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        LinearLayout.LayoutParams hudnParams = new LinearLayout.LayoutParams(dp(150), dp(70));
+        hudnParams.setMargins(dp(16),0,0,0);
+        logos.addView(hudnLogo, hudnParams);
+        content.addView(logos);
+        text(content, "GENFER · Modelo de Atención de Enfermería", 25, true);
+        text(content, "Hospital Universitario Departamental de Nariño · PAE práctico multiservicios", 13, false);
+        text(content, "NOC: nivel al recibir y nivel esperado · NIC por selección directa · Validación institucional requerida.", 12, false);
         LinearLayout context = card("Caso SIM-001");
         button(context, "Fecha: " + state.optString("date"), false, this::chooseDate);
         select(context, "Turno", Arrays.asList("Mañana", "Tarde", "Noche"), state.optString("shift"), false,
@@ -177,6 +202,8 @@ public final class MainActivity extends Activity {
         select(context, "Patología / condición de ingreso", names, repo.condition(conditionId).optString("label"), false, value -> {
             conditionId = cs.optJSONObject(names.indexOf(value)).optString("id"); activeId = ""; step = 0; render(false);
         });
+        String service = repo.condition(conditionId).optString("service");
+        if (!service.isEmpty()) text(context, "Servicio / área: " + service, 13, true);
         JSONObject plans = map(state, "plans");
         if (plans.length() > 0) {
             LinearLayout selected = card("Plan del caso · " + plans.length());
@@ -207,7 +234,7 @@ public final class MainActivity extends Activity {
         button(files, "Eliminar borrador guardado", false, () -> confirm("Eliminar guardado", "Se eliminará el archivo local de simulación. La pantalla actual no cambia.", () -> {
             draftFile().delete(); Toast.makeText(this, "Borrador guardado eliminado", Toast.LENGTH_SHORT).show();
         }));
-        text(content, "Escala ordinal simplificada 1–5: 1 = mayor compromiso y 5 = mejor estado. No reemplaza valoración clínica ni taxonomías licenciadas.", 12, false);
+        text(content, "Escala Likert visual 1–5: rojo = mayor compromiso, naranja = compromiso importante, amarillo = moderado, verde claro = leve, verde = estado esperado. No reemplaza el juicio clínico.", 12, false);
         scroll.post(() -> scroll.scrollTo(0, previous));
     }
     private void go(int next) {
@@ -229,7 +256,9 @@ public final class MainActivity extends Activity {
     }
     private void selection() {
         JSONObject c = repo.condition(conditionId);
-        text(card("Hallazgos de referencia"), join(c.optJSONArray("findings")) + ". No se incorporan automáticamente al PES.", 14, false);
+        LinearLayout findingsCard = card("Signos, síntomas y hallazgos de referencia");
+        text(findingsCard, "Área: " + c.optString("service") + "\n" + join(c.optJSONArray("findings")) + ".", 14, false);
+        text(findingsCard, "Son hallazgos de apoyo; enfermería selecciona únicamente los presentes en el paciente.", 12, false);
         JSONArray ds = c.optJSONArray("diagnoses");
         for (int i = 0; i < ds.length(); i++) {
             JSONObject d = ds.optJSONObject(i); String id = d.optString("id"); LinearLayout box = card(d.optString("label"));
@@ -244,7 +273,9 @@ public final class MainActivity extends Activity {
     private void diagnosisView() {
         JSONObject p = plan(), d = repo.diagnosis(activeId); boolean risk = "risk".equals(d.optString("type"));
         LinearLayout box = card(d.optString("label"));
-        select(box, risk ? "Factor de riesgo propuesto" : "Factor relacionado propuesto", Arrays.asList(d.optString("proposedFactor")), p.optString("factor"), true,
+        List<String> factorOptions = strings(d.optJSONArray("factorOptions"));
+        if (factorOptions.isEmpty()) factorOptions = Arrays.asList(d.optString("proposedFactor"));
+        select(box, risk ? "Factor de riesgo propuesto" : "Relacionado con…", factorOptions, p.optString("factor"), true,
                 value -> { put(p,"factor",value); invalidate(p); render(true); });
         text(box, "Texto de la matriz por cotejar. Si no corresponde, no fuerces una selección. Contexto asociado: " + repo.condition(p.optString("conditionId")).optString("label"), 12, false);
         select(box, "Momento de valoración", options("moments"), p.optString("moment"), true,
@@ -295,7 +326,7 @@ public final class MainActivity extends Activity {
     private void planningView() {
         JSONObject p=plan(),d=repo.diagnosis(activeId);
         LinearLayout header=card(d.optString("label"));
-        text(header,"NOC práctico: selecciona únicamente cómo recibes al paciente y a qué nivel quieres llevarlo. 1 = mayor compromiso; 5 = mejor estado.",13,false);
+        text(header,"NOC ampliados: selecciona los resultados pertinentes y define únicamente cómo recibes al paciente y a qué nivel quieres llevarlo. 1 = mayor compromiso; 5 = mejor estado.",13,false);
         LinearLayout choices=card("Resultados NOC propuestos");
         JSONObject outcomes=map(p,"nocs");
         for(String name:strings(d.optJSONArray("noc"))) check(choices,name,outcomes.has(name),checked -> {
@@ -309,7 +340,7 @@ public final class MainActivity extends Activity {
             text(box,repo.goal(r),15,true);
         }
         LinearLayout nics=card("Intervenciones NIC propuestas · selección directa");
-        text(nics,"Marca únicamente las intervenciones que correspondan al paciente. No necesitas diligenciar actividades, horario ni responsable en esta versión.",12,false);
+        text(nics,"NIC ampliados: marca únicamente las intervenciones pertinentes para este paciente. La selección sigue siendo rápida y no exige redactar actividades en esta versión.",12,false);
         JSONObject interventions=map(p,"nics");
         for(String name:strings(d.optJSONArray("nic"))) check(nics,name,interventions.has(name),checked -> {
             if(checked){put(interventions,name,newIntervention());}
@@ -370,7 +401,8 @@ public final class MainActivity extends Activity {
             }
             if(map(p,"nics").length()>0) text(box,"NIC · "+String.join(" · ",keys(map(p,"nics"))),14,true);
         }
-        button(header,"Exportar resumen TXT",true,() -> export(repo.summary(state),"text/plain","GENFER-PAE.txt"));
+        button(header,"Descargar plan en PDF",true,this::exportPdf);
+        button(header,"Exportar resumen TXT",false,() -> export(repo.summary(state),"text/plain","GENFER-PAE.txt"));
         button(header,"Exportar datos JSON",false,() -> export(repo.exportJson(state),"application/json","GENFER-PAE.json"));
         text(card("Resumen para revisión"),repo.summary(state),13,false);
     }
@@ -407,6 +439,84 @@ public final class MainActivity extends Activity {
             activeId="";conditionId="c1";step=3;render(false);
         } catch(Exception e) {message("No se pudo abrir el borrador","Guarda primero una simulación.\n"+e.getMessage());}
     }
+    private List<String> wrapPdf(String text, int max) {
+        List<String> lines = new ArrayList<>();
+        if (text == null || text.isEmpty()) { lines.add(""); return lines; }
+        for (String paragraph : text.split("\\n", -1)) {
+            if (paragraph.isEmpty()) { lines.add(""); continue; }
+            StringBuilder line = new StringBuilder();
+            for (String word : paragraph.split(" ")) {
+                if (line.length() > 0 && line.length() + word.length() + 1 > max) {
+                    lines.add(line.toString()); line = new StringBuilder();
+                }
+                if (line.length() > 0) line.append(" ");
+                line.append(word);
+            }
+            lines.add(line.toString());
+        }
+        return lines;
+    }
+    private byte[] buildPdf() throws Exception {
+        PdfDocument document = new PdfDocument();
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        List<String> lines = wrapPdf(repo.summary(state), 86);
+        int index = 0, pageNo = 1;
+        Bitmap genfer = BitmapFactory.decodeResource(getResources(), R.drawable.logo_genfer);
+        Bitmap hudn = BitmapFactory.decodeResource(getResources(), R.drawable.logo_hudn);
+        while (index < lines.size() || pageNo == 1) {
+            PdfDocument.PageInfo info = new PdfDocument.PageInfo.Builder(595, 842, pageNo).create();
+            PdfDocument.Page page = document.startPage(info);
+            Canvas canvas = page.getCanvas();
+            Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            paint.setColor(INK);
+            if (genfer != null) canvas.drawBitmap(genfer, null, new Rect(34, 24, 112, 102), paint);
+            if (hudn != null) canvas.drawBitmap(hudn, null, new Rect(392, 36, 558, 88), paint);
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+            paint.setTextSize(15);
+            canvas.drawText("GENFER · Plan de Cuidados de Enfermería", 128, 52, paint);
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
+            paint.setTextSize(9);
+            canvas.drawText("Hospital Universitario Departamental de Nariño · Prototipo para validación institucional", 128, 70, paint);
+            paint.setColor(TEAL);
+            canvas.drawRect(34, 112, 561, 116, paint);
+            paint.setColor(INK);
+            int y = 140;
+            paint.setTextSize(10);
+            int maxLines = 50;
+            int used = 0;
+            while (index < lines.size() && used < maxLines) {
+                String line = lines.get(index++);
+                boolean heading = line.startsWith("DIAGNÓSTICO DE ENFERMERÍA:") || line.startsWith("NOC:") || line.startsWith("NIC seleccionados:");
+                paint.setTypeface(Typeface.create(Typeface.DEFAULT, heading ? Typeface.BOLD : Typeface.NORMAL));
+                if (line.isEmpty()) y += 7;
+                else { canvas.drawText(line, 40, y, paint); y += 13; }
+                used++;
+            }
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
+            paint.setTextSize(8);
+            paint.setColor(0xFF657773);
+            canvas.drawText("Página " + pageNo + " · GENFER 3.1", 470, 818, paint);
+            document.finishPage(page);
+            pageNo++;
+            if (lines.isEmpty()) break;
+        }
+        document.writeTo(bytes);
+        document.close();
+        return bytes.toByteArray();
+    }
+    private void exportPdf() {
+        try {
+            pendingPdf = buildPdf();
+            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/pdf");
+            intent.putExtra(Intent.EXTRA_TITLE, "GENFER-Plan-de-Cuidados.pdf");
+            startActivityForResult(intent, EXPORT_REQUEST);
+        } catch (Exception e) {
+            pendingPdf = null;
+            message("No se pudo crear el PDF", e.getMessage());
+        }
+    }
     private void export(String data,String mime,String filename) {
         pendingExport=data;
         Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -416,13 +526,15 @@ public final class MainActivity extends Activity {
     @Override protected void onActivityResult(int request,int result,Intent data) {
         super.onActivityResult(request,result,data);
         if(request!=EXPORT_REQUEST)return;
-        if(result==RESULT_OK&&data!=null&&data.getData()!=null&&pendingExport!=null) {
+        if(result==RESULT_OK&&data!=null&&data.getData()!=null&&(pendingExport!=null||pendingPdf!=null)) {
             try(OutputStream out=getContentResolver().openOutputStream(data.getData(),"wt")) {
                 if(out==null)throw new IllegalStateException("No se pudo abrir el destino");
-                out.write(pendingExport.getBytes(StandardCharsets.UTF_8));Toast.makeText(this,"Archivo exportado",Toast.LENGTH_SHORT).show();
+                if (pendingPdf != null) out.write(pendingPdf);
+                else out.write(pendingExport.getBytes(StandardCharsets.UTF_8));
+                Toast.makeText(this,pendingPdf!=null?"PDF exportado":"Archivo exportado",Toast.LENGTH_SHORT).show();
             }catch(Exception e){message("No se pudo escribir el archivo",e.getMessage());}
         }
-        pendingExport=null;
+        pendingExport=null; pendingPdf=null;
     }
     @Override public void onBackPressed() {
         if(state==null){super.onBackPressed();return;}
