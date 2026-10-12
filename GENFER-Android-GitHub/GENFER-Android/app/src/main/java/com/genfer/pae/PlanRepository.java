@@ -73,7 +73,7 @@ public final class PlanRepository {
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss XXX", Locale.US).format(new Date());
     }
     public static JSONObject newState() {
-        return obj("version", 1, "caseId", "SIM-001", "date",
+        return obj("version", 2, "caseId", "SIM-001", "date",
                 new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date()),
                 "shift", "Mañana", "plans", new JSONObject());
     }
@@ -98,9 +98,10 @@ public final class PlanRepository {
     }
     public JSONObject newOutcome(String name) {
         JSONObject definition = catalog.optJSONObject("outcomes").optJSONObject(name);
-        return obj("indicator", "", "profile", definition.optString("profile"), "levels", 5,
-                "scaleVersion", "prototipo-5-v1", "baseline", 0, "target", 0, "actual", 0,
-                "deadline", "", "evaluationState", "Pendiente", "response", "", "evaluatedAt", "");
+        String profile = definition == null ? "generic" : definition.optString("profile", "generic");
+        return obj("profile", profile, "levels", 5, "scaleVersion", "GENFER-simple-5-v2",
+                "baseline", 0, "target", 0, "actual", 0, "evaluationState", "Pendiente",
+                "response", "", "evaluatedAt", "");
     }
     public static JSONObject newIntervention() {
         return obj("activities", new JSONArray(), "schedule", "", "responsible", "",
@@ -129,11 +130,9 @@ public final class PlanRepository {
         return CareEngine.comparison(r.optInt("baseline"), r.optInt("target"), r.optInt("actual"), r.optString("evaluationState"));
     }
     public String goal(JSONObject r) {
-        if (r.optString("indicator").isEmpty() || r.optString("deadline").isEmpty()
-                || !CareEngine.validScore(r.optInt("baseline")) || !CareEngine.validScore(r.optInt("target")))
-            return "Selecciona indicador, estado inicial, meta y plazo.";
-        return r.optString("deadline") + ": " + (r.optInt("baseline") == r.optInt("target") ? "mantener " + scoreText(r, "target")
-                : "pasar de " + scoreText(r, "baseline") + " a " + scoreText(r, "target")) + " en «" + r.optString("indicator") + "».";
+        if (!CareEngine.validScore(r.optInt("baseline")) || !CareEngine.validScore(r.optInt("target")))
+            return "Selecciona cómo recibes al paciente y a qué nivel quieres llevarlo.";
+        return "Nivel al recibir: " + scoreText(r, "baseline") + "  →  Nivel esperado: " + scoreText(r, "target");
     }
     public List<String> diagnosisIssues(JSONObject p) {
         List<String> issues = new ArrayList<>();
@@ -150,13 +149,10 @@ public final class PlanRepository {
         if (interventions.length() == 0) issues.add("Selecciona al menos una intervención NIC propuesta.");
         for (String name : keys(outcomes)) {
             JSONObject r = outcomes.optJSONObject(name);
-            if (r.optString("indicator").isEmpty() || r.optString("deadline").isEmpty()
-                    || !CareEngine.validScore(r.optInt("baseline")) || !CareEngine.validScore(r.optInt("target"))) issues.add(name + ": completa indicador, valores y plazo.");
-            if (r.optInt("target") > 0 && r.optInt("target") < r.optInt("baseline")) issues.add(name + ": elige una meta de mantenimiento o mejora.");
-        }
-        for (String name : keys(interventions)) {
-            JSONObject r = interventions.optJSONObject(name);
-            if (array(r, "activities").length() == 0 || r.optString("schedule").isEmpty() || r.optString("responsible").isEmpty()) issues.add(name + ": selecciona actividad, programación y responsable.");
+            if (!CareEngine.validScore(r.optInt("baseline")) || !CareEngine.validScore(r.optInt("target")))
+                issues.add(name + ": selecciona nivel al recibir y nivel esperado.");
+            if (r.optInt("target") > 0 && r.optInt("baseline") > 0 && r.optInt("target") < r.optInt("baseline"))
+                issues.add(name + ": el nivel esperado debe mantener o mejorar el estado inicial.");
         }
         return issues;
     }
@@ -179,38 +175,28 @@ public final class PlanRepository {
         try { return export.toString(2); } catch (JSONException e) { return export.toString(); }
     }
     public String summary(JSONObject state) {
-        StringBuilder s = new StringBuilder("GENFER · PAE DE HOSPITALIZACIÓN\nBORRADOR DE SIMULACIÓN — NO ES UN REGISTRO CLÍNICO FIRMADO\n");
-        s.append("SIM-001 · ").append(state.optString("date")).append(" · ").append(state.optString("shift"));
-        s.append("\nEscala ordinal ilustrativa 1–5. Mayor puntuación = mejor estado. No es una escala NOC oficial ni un sistema de triaje.\n");
+        StringBuilder s = new StringBuilder("GENFER · PLAN DE CUIDADOS DE HOSPITALIZACIÓN\n");
+        s.append("PROTOTIPO PARA VALIDACIÓN INSTITUCIONAL — NO SUSTITUYE EL JUICIO CLÍNICO\n");
+        s.append(state.optString("caseId", "SIM-001")).append(" · ").append(state.optString("date")).append(" · ").append(state.optString("shift"));
+        s.append("\nEscala ordinal simplificada 1–5: 1 = mayor compromiso; 5 = mejor estado.\n");
         JSONObject plans = map(state, "plans");
         if (plans.length() == 0) s.append("\nSin diagnósticos añadidos.\n");
         for (String id : keys(plans)) {
             JSONObject p = plans.optJSONObject(id);
-            s.append("\nDIAGNÓSTICO: ").append(diagnosis(id).optString("label")).append("\nCondición asociada: ").append(condition(p.optString("conditionId")).optString("label"));
-            s.append("\nPrioridad: ").append(p.optString("priority")).append("\n").append(formulation(p));
-            s.append("\nValoración: ").append(p.optString("moment")).append(" · Fuentes: ").append(join(array(p, "sources")));
-            s.append("\nRevisión de formulación registrada: ").append(p.optString("assessedAt", "Pendiente"));
-            List<String> issues = planIssues(p); issues.addAll(executionIssues(p));
-            s.append("\nEstructura del borrador: ").append(issues.isEmpty() ? "completa para revisión; no validada clínicamente" : "INCOMPLETA\n" + String.join("\n", issues));
+            s.append("\n\nDIAGNÓSTICO DE ENFERMERÍA: ").append(diagnosis(id).optString("label"));
+            s.append("\nDiagnóstico médico asociado: ").append(condition(p.optString("conditionId")).optString("label"));
+            s.append("\nPrioridad: ").append(p.optString("priority"));
+            s.append("\nPES: ").append(formulation(p));
             for (String name : keys(map(p, "nocs"))) {
                 JSONObject r = map(p, "nocs").optJSONObject(name);
-                s.append("\n\nNOC propuesto: ").append(name).append("\nIndicador: ").append(r.optString("indicator"));
-                s.append("\nAnclajes: "); JSONArray labels = anchors(r);
-                for (int i = 0; i < labels.length(); i++) s.append(i + 1).append("=").append(labels.optString(i)).append("; ");
-                s.append("\nMeta: ").append(goal(r)).append("\nInicial: ").append(scoreText(r, "baseline")).append(" · Meta: ").append(scoreText(r, "target"));
-                s.append("\nReevaluación: ").append("No evaluable".equals(r.optString("evaluationState")) ? "No evaluable" : scoreText(r, "actual"));
-                s.append("\nComparación: ").append(comparison(r)).append("\nFuente / motivo: ").append(r.optString("response"));
-                s.append("\nHora de registro: ").append(r.optString("evaluatedAt"));
+                s.append("\nNOC: ").append(name);
+                s.append(" | Recibo: ").append(scoreText(r, "baseline"));
+                s.append(" | Quiero: ").append(scoreText(r, "target"));
             }
-            for (String name : keys(map(p, "nics"))) {
-                JSONObject r = map(p, "nics").optJSONObject(name);
-                s.append("\n\nNIC propuesta: ").append(name).append("\nActividades: ").append(join(array(r, "activities")));
-                s.append("\nProgramación: ").append(r.optString("schedule")).append(" · Responsable: ").append(r.optString("responsible"));
-                s.append("\nEstado declarado: ").append(r.optString("state")).append(" · Registro: ").append(r.optString("note"));
-                s.append("\nHora de registro: ").append(r.optString("recordedAt"));
-            }
-            s.append("\nContinuidad: ").append(p.optString("followup")).append("\nObservación opcional: ").append(p.optString("note")).append("\n");
+            if (map(p, "nics").length() > 0) s.append("\nNIC seleccionados: ").append(String.join(", ", keys(map(p, "nics"))));
+            if (!p.optString("note").isEmpty()) s.append("\nObservación: ").append(p.optString("note"));
         }
         return s.toString();
     }
+
 }
