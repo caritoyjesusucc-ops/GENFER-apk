@@ -1,0 +1,999 @@
+{
+  "version": "3.1",
+  "note": "Opciones ampliadas para selección clínica. Requieren validación institucional contra taxonomías licenciadas.",
+  "diagnoses": {
+    "Dolor agudo": {
+      "factorOptions": [
+        "agente lesivo físico secundario a trauma o procedimiento",
+        "agente lesivo fisiológico secundario a inflamación o isquemia",
+        "incisión o manipulación quirúrgica",
+        "distensión, espasmo o presión tisular",
+        "presencia de dispositivos, drenajes o inmovilizadores"
+      ],
+      "nocExtra": [
+        "Confort",
+        "Respuesta al dolor"
+      ],
+      "nicExtra": [
+        "Manejo ambiental: confort",
+        "Aplicación de frío/calor según indicación",
+        "Educación sobre manejo del dolor",
+        "Evaluación sistemática del dolor"
+      ]
+    },
+    "Disminución del gasto cardíaco": {
+      "factorOptions": [
+        "alteración de la contractilidad miocárdica",
+        "alteración de la frecuencia o ritmo cardíaco",
+        "disminución de la precarga",
+        "aumento de la poscarga",
+        "alteración del volumen circulante",
+        "compromiso mecánico cardiovascular"
+      ],
+      "nocExtra": [
+        "Perfusión tisular",
+        "Signos vitales"
+      ],
+      "nicExtra": [
+        "Manejo de la presión arterial",
+        "Manejo de arritmias",
+        "Balance hídrico",
+        "Administración de medicamentos cardiovasculares según prescripción"
+      ]
+    },
+    "Intolerancia a la actividad": {
+      "factorOptions": [
+        "desequilibrio entre aporte y demanda de oxígeno",
+        "debilidad generalizada",
+        "reposo prolongado o desacondicionamiento",
+        "dolor que limita la actividad",
+        "alteración cardiopulmonar",
+        "fatiga asociada a enfermedad aguda o crónica"
+      ],
+      "nocExtra": [
+        "Nivel de energía",
+        "Movilidad"
+      ],
+      "nicExtra": [
+        "Planificación de periodos de descanso",
+        "Fomento de ejercicios progresivos",
+        "Monitorización de respuesta a la actividad",
+        "Ayuda en actividades de la vida diaria"
+      ]
+    },
+    "Ansiedad": {
+      "factorOptions": [
+        "amenaza percibida al estado de salud",
+        "procedimiento diagnóstico o quirúrgico",
+        "hospitalización y ambiente desconocido",
+        "incertidumbre sobre evolución o pronóstico",
+        "separación del entorno familiar",
+        "cambios corporales o funcionales"
+      ],
+      "nocExtra": [
+        "Afrontamiento",
+        "Bienestar emocional"
+      ],
+      "nicExtra": [
+        "Facilitar presencia familiar",
+        "Técnicas de relajación",
+        "Orientación anticipatoria",
+        "Apoyo en la toma de decisiones"
+      ]
+    },
+    "Autogestión ineficaz de la salud": {
+      "factorOptions": [
+        "complejidad del régimen terapéutico",
+        "conocimiento insuficiente del proceso de enfermedad",
+        "barreras sociales o familiares para el autocuidado",
+        "dificultad para integrar el tratamiento a la rutina",
+        "percepción inadecuada del riesgo",
+        "dificultad de acceso o continuidad del tratamiento"
+      ],
+      "nocExtra": [
+        "Conducta de cumplimiento",
+        "Conocimiento: proceso de enfermedad"
+      ],
+      "nicExtra": [
+        "Educación sanitaria",
+        "Identificación de barreras para adherencia",
+        "Coordinación de continuidad del cuidado",
+        "Implicación de la familia en el plan"
+      ]
+    },
+    "Exceso de volumen de líquidos": {
+      "factorOptions": [
+        "deterioro de mecanismos reguladores renales",
+        "compromiso de la función cardíaca",
+        "aporte de líquidos superior a la capacidad de eliminación",
+        "retención de sodio y agua",
+        "alteración de la presión oncótica",
+        "respuesta inflamatoria con tercer espacio"
+      ],
+      "nocExtra": [
+        "Estado respiratorio",
+        "Peso corporal"
+      ],
+      "nicExtra": [
+        "Restricción de líquidos según indicación",
+        "Restricción de sodio según plan",
+        "Monitorización de edema",
+        "Control de ingesta y eliminación"
+      ]
+    },
+    "Deterioro del intercambio gaseoso": {
+      "factorOptions": [
+        "desequilibrio ventilación/perfusión",
+        "alteración de la membrana alveolocapilar",
+        "acumulación de secreciones o líquido alveolar",
+        "disminución de superficie pulmonar funcional",
+        "alteración de difusión de gases",
+        "compromiso pulmonar traumático o posoperatorio"
+      ],
+      "nocExtra": [
+        "Saturación de oxígeno",
+        "Estado respiratorio"
+      ],
+      "nicExtra": [
+        "Gasometría y oximetría según indicación",
+        "Fisioterapia respiratoria",
+        "Manejo de dispositivos de oxígeno",
+        "Preparación y apoyo para ventilación no invasiva o invasiva"
+      ]
+    },
+    "Patrón respiratorio ineficaz": {
+      "factorOptions": [
+        "aumento del trabajo respiratorio",
+        "dolor torácico o abdominal",
+        "fatiga de musculatura respiratoria",
+        "alteración neuromuscular",
+        "ansiedad o respuesta al estrés",
+        "alteración de la expansión pulmonar"
+      ],
+      "nocExtra": [
+        "Profundidad respiratoria",
+        "Tolerancia a la actividad"
+      ],
+      "nicExtra": [
+        "Ejercicios respiratorios",
+        "Incentivo respiratorio según indicación",
+        "Control del dolor para favorecer ventilación",
+        "Vigilancia de fatiga respiratoria"
+      ]
+    },
+    "Limpieza ineficaz de las vías aéreas": {
+      "factorOptions": [
+        "retención de secreciones",
+        "tos ineficaz",
+        "disminución del nivel de conciencia",
+        "dolor que limita la tos",
+        "vía aérea artificial",
+        "debilidad neuromuscular"
+      ],
+      "nocExtra": [
+        "Control de secreciones",
+        "Oxigenación"
+      ],
+      "nicExtra": [
+        "Humidificación según indicación",
+        "Higiene bronquial",
+        "Cuidados de vía aérea artificial",
+        "Movilización para favorecer drenaje de secreciones"
+      ]
+    },
+    "Hipertermia": {
+      "factorOptions": [
+        "proceso infeccioso",
+        "respuesta inflamatoria sistémica",
+        "reacción transfusional o farmacológica",
+        "alteración de la termorregulación",
+        "complicación posoperatoria",
+        "exposición ambiental o hipertermia perioperatoria"
+      ],
+      "nocExtra": [
+        "Signos vitales",
+        "Confort"
+      ],
+      "nicExtra": [
+        "Obtención de cultivos según indicación",
+        "Administración de antipiréticos según prescripción",
+        "Medidas físicas de enfriamiento",
+        "Vigilancia de signos de sepsis"
+      ]
+    },
+    "Déficit de volumen de líquidos": {
+      "factorOptions": [
+        "pérdida activa de sangre",
+        "pérdidas gastrointestinales",
+        "diuresis aumentada",
+        "disminución de ingesta",
+        "pérdidas por drenajes o heridas",
+        "tercer espacio o aumento de permeabilidad capilar"
+      ],
+      "nocExtra": [
+        "Estado circulatorio",
+        "Perfusión tisular"
+      ],
+      "nicExtra": [
+        "Manejo de hipovolemia",
+        "Control de balance hídrico",
+        "Monitorización hemodinámica",
+        "Vigilancia de pérdidas por drenajes o sangrado"
+      ]
+    },
+    "Deterioro de la eliminación urinaria": {
+      "factorOptions": [
+        "irritación o infección del tracto urinario",
+        "obstrucción urinaria",
+        "alteración neurológica",
+        "efecto de medicamentos o anestesia",
+        "disminución de movilidad",
+        "presencia de sonda o instrumentación urinaria"
+      ],
+      "nocExtra": [
+        "Confort urinario",
+        "Control de síntomas urinarios"
+      ],
+      "nicExtra": [
+        "Medición de residuo vesical según indicación",
+        "Cuidados de sonda urinaria",
+        "Fomento de micción espontánea",
+        "Educación sobre hábitos urinarios"
+      ]
+    },
+    "Confusión aguda": {
+      "factorOptions": [
+        "alteración neurológica aguda",
+        "hipoxemia",
+        "infección o sepsis",
+        "alteración metabólica o electrolítica",
+        "efecto de medicamentos o sustancias",
+        "dolor, privación de sueño o ambiente desconocido"
+      ],
+      "nocExtra": [
+        "Estado cognitivo",
+        "Seguridad personal"
+      ],
+      "nicExtra": [
+        "Prevención de delirium",
+        "Reorientación frecuente",
+        "Control de estímulos ambientales",
+        "Promoción del sueño",
+        "Implicación de familiar/cuidador"
+      ]
+    },
+    "Deterioro de la movilidad física": {
+      "factorOptions": [
+        "dolor musculoesquelético",
+        "alteración neuromuscular",
+        "fractura o lesión osteoarticular",
+        "restricción prescrita de movimiento",
+        "debilidad generalizada",
+        "dispositivos de inmovilización o drenajes"
+      ],
+      "nocExtra": [
+        "Nivel funcional",
+        "Consecuencias de la inmovilidad"
+      ],
+      "nicExtra": [
+        "Manejo de dispositivos de inmovilización",
+        "Ejercicios de rango articular",
+        "Transferencia segura",
+        "Prevención de complicaciones por inmovilidad"
+      ]
+    },
+    "Deterioro de la comunicación verbal": {
+      "factorOptions": [
+        "afasia secundaria a lesión neurológica",
+        "disartria por alteración neuromuscular",
+        "presencia de vía aérea artificial",
+        "cirugía de cabeza y cuello",
+        "alteración cognitiva",
+        "barrera sensorial o del lenguaje"
+      ],
+      "nocExtra": [
+        "Participación en la comunicación",
+        "Satisfacción con la comunicación"
+      ],
+      "nicExtra": [
+        "Uso de tablero o ayudas de comunicación",
+        "Dar tiempo suficiente para responder",
+        "Coordinar apoyo de fonoaudiología",
+        "Verificar comprensión"
+      ]
+    },
+    "Deterioro de la deglución": {
+      "factorOptions": [
+        "alteración neurológica",
+        "debilidad neuromuscular",
+        "cirugía de cabeza, cuello o vía digestiva alta",
+        "disminución del nivel de conciencia",
+        "dolor o edema orofaríngeo",
+        "alteración estructural"
+      ],
+      "nocExtra": [
+        "Prevención de aspiración",
+        "Ingesta nutricional"
+      ],
+      "nicExtra": [
+        "Evaluación de tolerancia oral",
+        "Adaptación de consistencia según indicación",
+        "Higiene oral",
+        "Coordinación con terapia de deglución/nutrición"
+      ]
+    },
+    "Déficit de autocuidado": {
+      "factorOptions": [
+        "debilidad física",
+        "dolor",
+        "alteración neuromuscular",
+        "restricción de movilidad",
+        "alteración cognitiva",
+        "dispositivos o heridas que limitan la independencia"
+      ],
+      "nocExtra": [
+        "Autonomía personal",
+        "Participación en autocuidado"
+      ],
+      "nicExtra": [
+        "Entrenamiento en actividades de autocuidado",
+        "Uso de ayudas técnicas",
+        "Participación gradual del paciente",
+        "Educación al cuidador"
+      ]
+    },
+    "Riesgo de aspiración": {
+      "factorOptions": [
+        "disminución del nivel de conciencia",
+        "disfagia",
+        "vómito recurrente",
+        "alimentación enteral",
+        "vía aérea artificial",
+        "alteración de reflejos protectores"
+      ],
+      "nocExtra": [
+        "Permeabilidad de vías respiratorias",
+        "Oxigenación"
+      ],
+      "nicExtra": [
+        "Verificación de posición antes de alimentación",
+        "Manejo de nutrición enteral",
+        "Higiene oral",
+        "Disponibilidad de aspiración",
+        "Vigilancia durante y después de la ingesta"
+      ]
+    },
+    "Riesgo de perfusión tisular cerebral ineficaz": {
+      "factorOptions": [
+        "hipertensión severa",
+        "hipotensión o inestabilidad hemodinámica",
+        "aumento de presión intracraneal",
+        "hemorragia o isquemia cerebral",
+        "alteración vascular cerebral",
+        "hipoxemia"
+      ],
+      "nocExtra": [
+        "Presión intracraneal",
+        "Función neurológica"
+      ],
+      "nicExtra": [
+        "Valoración pupilar seriada",
+        "Cabecera y alineación según condición",
+        "Prevención de aumentos de presión intracraneal",
+        "Control de oxigenación",
+        "Preparación para neuroimagen/procedimientos"
+      ]
+    },
+    "Riesgo de nivel de glucemia inestable": {
+      "factorOptions": [
+        "diabetes mellitus",
+        "ayuno perioperatorio",
+        "cambios en ingesta nutricional",
+        "tratamiento con insulina o hipoglucemiantes",
+        "infección o respuesta al estrés",
+        "uso de corticosteroides"
+      ],
+      "nocExtra": [
+        "Estado metabólico",
+        "Conocimiento: control de diabetes"
+      ],
+      "nicExtra": [
+        "Manejo de insulina según prescripción",
+        "Coordinación con nutrición",
+        "Reconocimiento de signos de hipo/hiperglucemia",
+        "Control perioperatorio de glucosa"
+      ]
+    },
+    "Riesgo de desequilibrio electrolítico": {
+      "factorOptions": [
+        "deterioro de función renal",
+        "pérdidas gastrointestinales",
+        "diuréticos u otros medicamentos",
+        "aporte o reposición inadecuada",
+        "alteraciones endocrinas",
+        "grandes pérdidas por drenajes o cirugía"
+      ],
+      "nocExtra": [
+        "Función renal",
+        "Estado cardiovascular"
+      ],
+      "nicExtra": [
+        "Reposición de electrolitos según prescripción",
+        "Vigilancia electrocardiográfica",
+        "Control de función renal",
+        "Revisión de pérdidas y aportes"
+      ]
+    },
+    "Riesgo de shock": {
+      "factorOptions": [
+        "hemorragia activa o potencial",
+        "sepsis",
+        "pérdida de líquidos",
+        "trauma mayor",
+        "reacción anafiláctica",
+        "compromiso cardiogénico u obstructivo"
+      ],
+      "nocExtra": [
+        "Signos vitales",
+        "Perfusión periférica"
+      ],
+      "nicExtra": [
+        "Activación de respuesta de emergencia",
+        "Acceso vascular y preparación de fluidos",
+        "Control de hemorragia",
+        "Monitorización de lactato/perfusión según indicación",
+        "Preparación para hemoderivados"
+      ]
+    },
+    "Náuseas": {
+      "factorOptions": [
+        "efecto de anestesia",
+        "estimulación gastrointestinal",
+        "dolor",
+        "medicamentos",
+        "alteración metabólica",
+        "movimiento o procedimiento diagnóstico"
+      ],
+      "nocExtra": [
+        "Ingesta alimentaria",
+        "Hidratación"
+      ],
+      "nicExtra": [
+        "Control de desencadenantes",
+        "Progresión de vía oral según tolerancia",
+        "Higiene oral",
+        "Registro de episodios de vómito"
+      ]
+    },
+    "Fatiga": {
+      "factorOptions": [
+        "anemia",
+        "enfermedad inflamatoria o infecciosa",
+        "cáncer o tratamiento oncológico",
+        "alteración metabólica",
+        "reposo prolongado",
+        "trastorno del sueño"
+      ],
+      "nocExtra": [
+        "Sueño",
+        "Tolerancia a la actividad"
+      ],
+      "nicExtra": [
+        "Priorización de actividades",
+        "Plan de descanso",
+        "Fomento de sueño reparador",
+        "Apoyo nutricional"
+      ]
+    },
+    "Riesgo de sangrado": {
+      "factorOptions": [
+        "procedimiento quirúrgico o invasivo",
+        "trauma",
+        "anticoagulación o antiagregación",
+        "trombocitopenia",
+        "coagulopatía",
+        "lesión vascular o sitio de punción"
+      ],
+      "nocExtra": [
+        "Estado circulatorio",
+        "Perfusión tisular"
+      ],
+      "nicExtra": [
+        "Control de sitios de punción y drenajes",
+        "Cuantificación de pérdidas",
+        "Preparación para hemoderivados",
+        "Evitar procedimientos traumáticos innecesarios",
+        "Educación sobre signos de sangrado"
+      ]
+    },
+    "Perfusión tisular periférica ineficaz": {
+      "factorOptions": [
+        "obstrucción arterial",
+        "compromiso venoso",
+        "edema o síndrome compartimental",
+        "lesión vascular traumática",
+        "compresión por yeso o inmovilizador",
+        "alteración microvascular"
+      ],
+      "nocExtra": [
+        "Integridad tisular",
+        "Dolor"
+      ],
+      "nicExtra": [
+        "Valoración de color, temperatura y pulsos",
+        "Valoración de llenado capilar y sensibilidad",
+        "Manejo de edema",
+        "Notificación de cambios neurovasculares",
+        "Cuidados del dispositivo de inmovilización"
+      ]
+    },
+    "Riesgo de infección": {
+      "factorOptions": [
+        "incisión o herida abierta",
+        "dispositivo invasivo",
+        "inmunosupresión",
+        "cirugía prolongada o contaminada",
+        "alteración de barrera cutánea",
+        "malnutrición o diabetes"
+      ],
+      "nocExtra": [
+        "Integridad tisular",
+        "Severidad de la infección"
+      ],
+      "nicExtra": [
+        "Técnica aséptica",
+        "Cuidados de catéteres y drenajes",
+        "Vigilancia de herida quirúrgica",
+        "Higiene de manos",
+        "Educación al paciente y familia"
+      ]
+    },
+    "Deterioro de la integridad tisular": {
+      "factorOptions": [
+        "trauma directo",
+        "incisión quirúrgica",
+        "presión o fricción",
+        "perfusión tisular alterada",
+        "infección local",
+        "presencia de ostomía, drenaje o dispositivo"
+      ],
+      "nocExtra": [
+        "Control del riesgo: infección",
+        "Confort"
+      ],
+      "nicExtra": [
+        "Selección de apósitos según herida",
+        "Medición y documentación de la lesión",
+        "Manejo de ostomías/drenajes",
+        "Protección de bordes de herida",
+        "Educación sobre cuidado de herida"
+      ]
+    },
+    "Ingesta nutricional inadecuada": {
+      "factorOptions": [
+        "anorexia o disminución de apetito",
+        "náuseas o vómito",
+        "ayuno prolongado",
+        "disfagia",
+        "malabsorción o alteración gastrointestinal",
+        "aumento de requerimientos metabólicos"
+      ],
+      "nocExtra": [
+        "Peso corporal",
+        "Energía"
+      ],
+      "nicExtra": [
+        "Control de ingesta calórica/proteica",
+        "Suplementación según indicación",
+        "Manejo de nutrición enteral/parenteral",
+        "Control de peso",
+        "Manejo de síntomas que limitan ingesta"
+      ]
+    },
+    "Diarrea": {
+      "factorOptions": [
+        "infección gastrointestinal",
+        "antibióticos u otros medicamentos",
+        "alimentación enteral",
+        "inflamación intestinal",
+        "malabsorción",
+        "procedimiento o cirugía gastrointestinal"
+      ],
+      "nocExtra": [
+        "Equilibrio electrolítico",
+        "Integridad cutánea"
+      ],
+      "nicExtra": [
+        "Registro de características de deposiciones",
+        "Precauciones de contacto cuando correspondan",
+        "Protección de piel perineal",
+        "Control de pérdidas",
+        "Educación alimentaria"
+      ]
+    },
+    "Riesgo de caídas": {
+      "factorOptions": [
+        "debilidad o desacondicionamiento",
+        "alteración de marcha o equilibrio",
+        "hipotensión o mareo",
+        "medicamentos sedantes",
+        "alteración cognitiva",
+        "posoperatorio o dispositivos que limitan movilidad"
+      ],
+      "nocExtra": [
+        "Seguridad personal",
+        "Movilidad"
+      ],
+      "nicExtra": [
+        "Señalización de riesgo",
+        "Acompañamiento en movilización",
+        "Calzado seguro",
+        "Barandas y timbre al alcance",
+        "Revisión de medicamentos/factores contribuyentes"
+      ]
+    },
+    "Riesgo de lesión": {
+      "factorOptions": [
+        "convulsiones",
+        "alteración del nivel de conciencia",
+        "agitación o confusión",
+        "trauma existente",
+        "dispositivos invasivos",
+        "estado perioperatorio"
+      ],
+      "nocExtra": [
+        "Seguridad personal",
+        "Estado neurológico"
+      ],
+      "nicExtra": [
+        "Protección durante convulsiones",
+        "Retiro de objetos peligrosos",
+        "Supervisión cercana",
+        "Precauciones según procedimiento",
+        "Educación a familiar/cuidador"
+      ]
+    },
+    "Trastorno del patrón del sueño": {
+      "factorOptions": [
+        "dolor",
+        "ansiedad",
+        "ruido o interrupciones hospitalarias",
+        "disnea u otros síntomas",
+        "medicamentos",
+        "alteración del ciclo circadiano"
+      ],
+      "nocExtra": [
+        "Confort",
+        "Nivel de fatiga"
+      ],
+      "nicExtra": [
+        "Agrupar cuidados nocturnos",
+        "Reducir luz y ruido",
+        "Rutina de sueño",
+        "Control de síntomas antes de dormir"
+      ]
+    },
+    "Afrontamiento ineficaz": {
+      "factorOptions": [
+        "crisis situacional",
+        "diagnóstico de enfermedad grave",
+        "trauma o pérdida funcional",
+        "cambios de imagen corporal",
+        "hospitalización prolongada",
+        "recursos de apoyo insuficientes"
+      ],
+      "nocExtra": [
+        "Bienestar emocional",
+        "Apoyo social"
+      ],
+      "nicExtra": [
+        "Identificar red de apoyo",
+        "Facilitar expresión de emociones",
+        "Derivación a apoyo psicosocial",
+        "Fijación de metas realistas"
+      ]
+    },
+    "Deterioro de la ventilación espontánea": {
+      "factorOptions": [
+        "fatiga muscular respiratoria",
+        "alteración neuromuscular",
+        "trauma torácico",
+        "depresión del sistema nervioso central",
+        "obstrucción de vía aérea",
+        "complicación anestésica o posoperatoria"
+      ],
+      "nocExtra": [
+        "Intercambio gaseoso",
+        "Permeabilidad de vías respiratorias"
+      ],
+      "nicExtra": [
+        "Preparación para soporte ventilatorio",
+        "Cuidados de ventilación mecánica",
+        "Prevención de complicaciones asociadas a ventilación",
+        "Sedación/analgesia según indicación"
+      ]
+    },
+    "Riesgo de deterioro de la integridad cutánea": {
+      "factorOptions": [
+        "inmovilidad",
+        "humedad",
+        "edema",
+        "alteración de perfusión",
+        "disminución de sensibilidad",
+        "cirugía o procedimiento prolongado"
+      ],
+      "nocExtra": [
+        "Control del riesgo",
+        "Movilidad"
+      ],
+      "nicExtra": [
+        "Valoración de riesgo de lesión por presión",
+        "Manejo de humedad",
+        "Uso de superficies especiales",
+        "Protección de prominencias óseas"
+      ]
+    },
+    "Estreñimiento": {
+      "factorOptions": [
+        "inmovilidad",
+        "uso de opioides",
+        "disminución de ingesta de líquidos",
+        "cambios en dieta",
+        "cirugía abdominal",
+        "alteración de hábitos intestinales"
+      ],
+      "nocExtra": [
+        "Confort",
+        "Motilidad gastrointestinal"
+      ],
+      "nicExtra": [
+        "Plan de evacuación",
+        "Fomento de fibra según indicación",
+        "Revisión de fármacos constipantes",
+        "Educación sobre hábito intestinal"
+      ]
+    },
+    "Motilidad gastrointestinal disfuncional": {
+      "factorOptions": [
+        "cirugía abdominal",
+        "íleo posoperatorio",
+        "inflamación peritoneal",
+        "alteración electrolítica",
+        "uso de opioides",
+        "obstrucción mecánica"
+      ],
+      "nocExtra": [
+        "Confort gastrointestinal",
+        "Estado nutricional"
+      ],
+      "nicExtra": [
+        "Auscultación y seguimiento de ruidos intestinales",
+        "Control de distensión",
+        "Manejo de sonda gastrointestinal",
+        "Progresión de dieta según indicación",
+        "Movilización temprana"
+      ]
+    },
+    "Retención urinaria": {
+      "factorOptions": [
+        "efecto de anestesia",
+        "dolor",
+        "obstrucción urinaria",
+        "alteración neurológica",
+        "inmovilidad",
+        "medicamentos con efecto anticolinérgico/opioide"
+      ],
+      "nocExtra": [
+        "Función urinaria",
+        "Confort"
+      ],
+      "nicExtra": [
+        "Estimulación de micción",
+        "Medición de volumen vesical según disponibilidad",
+        "Cateterismo según indicación",
+        "Privacidad y posición adecuada"
+      ]
+    },
+    "Riesgo de hipotermia perioperatoria": {
+      "factorOptions": [
+        "exposición en quirófano",
+        "anestesia general o regional",
+        "infusión de líquidos fríos",
+        "cirugía prolongada",
+        "trauma con exposición",
+        "pérdida sanguínea"
+      ],
+      "nocExtra": [
+        "Confort",
+        "Recuperación posanestésica"
+      ],
+      "nicExtra": [
+        "Mantas térmicas",
+        "Calentamiento de fluidos según protocolo",
+        "Minimizar exposición corporal",
+        "Control seriado de temperatura"
+      ]
+    },
+    "Riesgo de lesión por presión": {
+      "factorOptions": [
+        "inmovilidad prolongada",
+        "cirugía prolongada",
+        "disminución de sensibilidad",
+        "perfusión alterada",
+        "humedad",
+        "estado nutricional comprometido"
+      ],
+      "nocExtra": [
+        "Integridad cutánea",
+        "Movilidad"
+      ],
+      "nicExtra": [
+        "Escala de riesgo institucional",
+        "Cambios posturales programados",
+        "Talones libres de presión",
+        "Inspección de piel en cada turno"
+      ]
+    },
+    "Riesgo de trombosis venosa": {
+      "factorOptions": [
+        "inmovilidad",
+        "cirugía mayor",
+        "trauma",
+        "cáncer",
+        "antecedente trombótico",
+        "edad avanzada u otros factores de riesgo"
+      ],
+      "nocExtra": [
+        "Movilidad",
+        "Estado circulatorio"
+      ],
+      "nicExtra": [
+        "Profilaxis farmacológica según prescripción",
+        "Dispositivos de compresión según indicación",
+        "Educación sobre signos de TVP/TEP",
+        "Hidratación según condición"
+      ]
+    },
+    "Riesgo de compromiso neurovascular periférico": {
+      "factorOptions": [
+        "fractura",
+        "edema significativo",
+        "yeso o férula",
+        "tracción",
+        "lesión vascular",
+        "síndrome compartimental potencial"
+      ],
+      "nocExtra": [
+        "Dolor",
+        "Integridad tisular"
+      ],
+      "nicExtra": [
+        "Control neurovascular horario según condición",
+        "Valorar dolor desproporcionado",
+        "Revisar ajuste de inmovilizador",
+        "Elevar extremidad cuando esté indicado",
+        "Notificación urgente de cambios"
+      ]
+    },
+    "Recuperación quirúrgica retrasada": {
+      "factorOptions": [
+        "dolor no controlado",
+        "infección o complicación posoperatoria",
+        "malnutrición",
+        "movilidad limitada",
+        "comorbilidad significativa",
+        "respuesta fisiológica prolongada a cirugía"
+      ],
+      "nocExtra": [
+        "Tolerancia a la actividad",
+        "Curación de la herida"
+      ],
+      "nicExtra": [
+        "Plan de recuperación acelerada según protocolo",
+        "Optimización de sueño y descanso",
+        "Educación de metas diarias",
+        "Coordinación interdisciplinaria"
+      ]
+    },
+    "Confort deteriorado": {
+      "factorOptions": [
+        "dolor",
+        "posición incómoda",
+        "dispositivos invasivos",
+        "ruido o ambiente hospitalario",
+        "ansiedad",
+        "síntomas gastrointestinales o respiratorios"
+      ],
+      "nocExtra": [
+        "Sueño",
+        "Nivel de ansiedad"
+      ],
+      "nicExtra": [
+        "Ajuste de posición y ropa de cama",
+        "Higiene y cuidado personal",
+        "Reducción de estímulos molestos",
+        "Atención de necesidades básicas"
+      ]
+    },
+    "Trastorno de la imagen corporal": {
+      "factorOptions": [
+        "amputación o pérdida anatómica",
+        "mastectomía u otra cirugía oncológica",
+        "ostomía",
+        "cicatriz o deformidad",
+        "cambio funcional importante",
+        "alteración visible secundaria a enfermedad"
+      ],
+      "nocExtra": [
+        "Autoestima",
+        "Afrontamiento"
+      ],
+      "nicExtra": [
+        "Facilitar adaptación gradual al cambio corporal",
+        "Educación para autocuidado de ostomía/prótesis",
+        "Contacto con redes de apoyo",
+        "Privacidad y respeto de preferencias"
+      ]
+    },
+    "Riesgo de alteración de la díada materno-fetal": {
+      "factorOptions": [
+        "hipertensión materna",
+        "hemorragia obstétrica",
+        "infección materna",
+        "trabajo de parto pretérmino",
+        "alteración placentaria",
+        "enfermedad materna descompensada"
+      ],
+      "nocExtra": [
+        "Estado materno",
+        "Adaptación del embarazo"
+      ],
+      "nicExtra": [
+        "Control de movimientos fetales según indicación",
+        "Vigilancia de signos de alarma obstétrica",
+        "Preparación para nacimiento urgente",
+        "Apoyo emocional a gestante y familia"
+      ]
+    },
+    "Riesgo de perfusión uteroplacentaria ineficaz": {
+      "factorOptions": [
+        "preeclampsia o hipertensión",
+        "hemorragia materna",
+        "desprendimiento placentario",
+        "hipotensión materna",
+        "hipoxemia materna",
+        "contracciones uterinas excesivas"
+      ],
+      "nocExtra": [
+        "Signos vitales maternos",
+        "Estado circulatorio materno"
+      ],
+      "nicExtra": [
+        "Posición lateral izquierda cuando corresponda",
+        "Control de dinámica uterina",
+        "Preparación de acceso venoso y fluidos",
+        "Coordinación obstétrica inmediata"
+      ]
+    },
+    "Riesgo de infección puerperal": {
+      "factorOptions": [
+        "cesárea o procedimiento obstétrico",
+        "ruptura prolongada de membranas",
+        "múltiples tactos vaginales",
+        "hemorragia posparto",
+        "retención de restos",
+        "herida perineal o quirúrgica"
+      ],
+      "nocExtra": [
+        "Termorregulación",
+        "Curación de herida"
+      ],
+      "nicExtra": [
+        "Vigilancia de loquios",
+        "Vigilancia de involución uterina",
+        "Higiene perineal",
+        "Educación de signos de alarma puerperal"
+      ]
+    }
+  }
+}
