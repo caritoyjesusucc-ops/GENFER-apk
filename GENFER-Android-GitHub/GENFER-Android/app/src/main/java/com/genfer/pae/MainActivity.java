@@ -158,6 +158,17 @@ public final class MainActivity extends Activity {
             @Override public void onNothingSelected(AdapterView<?> p) { }
         });
     }
+    private void field(LinearLayout parent, String title, String value, String hint, Choice callback) {
+        text(parent, title, 13, true);
+        EditText input = new EditText(this);
+        input.setText(value); input.setHint(hint); input.setSingleLine(true); input.setTextColor(INK); input.setTextSize(14);
+        input.setMinHeight(dp(52)); parent.addView(input, new LinearLayout.LayoutParams(-1, -2));
+        input.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s,int start,int count,int after) { }
+            @Override public void onTextChanged(CharSequence s,int start,int before,int count) { callback.accept(s.toString()); }
+            @Override public void afterTextChanged(Editable e) { }
+        });
+    }
     private List<String> options(String key) { return strings(repo.catalog.optJSONArray(key)); }
     private void check(LinearLayout parent, String title, boolean selected, Checked action) {
         CheckBox box = new CheckBox(this); box.setText(title); box.setTextColor(INK); box.setMinHeight(dp(48));
@@ -193,7 +204,11 @@ public final class MainActivity extends Activity {
         text(content, "GENFER · Modelo de Atención de Enfermería", 25, true);
         text(content, "Hospital Universitario Departamental de Nariño · PAE práctico multiservicios", 13, false);
         text(content, "NOC: nivel al recibir y nivel esperado · NIC por selección directa · Validación institucional requerida.", 12, false);
-        LinearLayout context = card("Caso SIM-001");
+        LinearLayout context = card("Datos del paciente");
+        field(context, "Nombre del paciente", state.optString("patientName"), "Nombres y apellidos",
+                value -> put(state, "patientName", value));
+        field(context, "Identificación", state.optString("patientId"), "Documento / historia clínica",
+                value -> put(state, "patientId", value));
         button(context, "Fecha: " + state.optString("date"), false, this::chooseDate);
         select(context, "Turno", Arrays.asList("Mañana", "Tarde", "Noche"), state.optString("shift"), false,
                 value -> { put(state, "shift", value); if (step == 4) render(true); });
@@ -263,7 +278,7 @@ public final class MainActivity extends Activity {
         for (int i = 0; i < ds.length(); i++) {
             JSONObject d = ds.optJSONObject(i); String id = d.optString("id"); LinearLayout box = card(d.optString("label"));
             text(box, "risk".equals(d.optString("type")) ? "Diagnóstico de riesgo · sin manifestaciones" : "Problema actual · formulación PES", 13, false);
-            text(box, d.optJSONArray("noc").length() + " resultados NOC y " + d.optJSONArray("nic").length() + " intervenciones NIC propuestos", 13, false);
+            text(box, "Banco de la patología: 10 resultados NOC y 20 intervenciones NIC posibles", 13, false);
             button(box, map(state,"plans").has(id) ? "Abrir formulación" : "Añadir al plan", true, () -> {
                 if (!map(state,"plans").has(id)) put(map(state,"plans"),id,repo.newPlan(conditionId,id));
                 activeId = id; go(1);
@@ -286,8 +301,9 @@ public final class MainActivity extends Activity {
         });
         if (risk) text(box,"Este diagnóstico no incluye signos, síntomas ni «manifestado por».",14,true);
         else {
-            text(box,"Signos y síntomas pertinentes",16,true);
-            for (String value : strings(d.optJSONArray("evidenceOptions"))) check(box,value,contains(array(p,"evidence"),value),checked -> {
+            text(box,"S · Manifestado por… (signos, síntomas y hallazgos presentes)",16,true);
+            text(box,"Selecciona únicamente los hallazgos realmente identificados en el paciente.",12,false);
+            for (String value : repo.evidenceOptions(p.optString("conditionId"), activeId)) check(box,value,contains(array(p,"evidence"),value),checked -> {
                 toggle(p,"evidence",value,checked); invalidate(p); render(true);
             });
         }
@@ -326,10 +342,10 @@ public final class MainActivity extends Activity {
     private void planningView() {
         JSONObject p=plan(),d=repo.diagnosis(activeId);
         LinearLayout header=card(d.optString("label"));
-        text(header,"NOC ampliados: selecciona los resultados pertinentes y define únicamente cómo recibes al paciente y a qué nivel quieres llevarlo. 1 = mayor compromiso; 5 = mejor estado.",13,false);
+        text(header,"Banco de la patología: 10 NOC posibles. Selecciona solo los pertinentes y define cómo recibes al paciente y a qué nivel quieres llevarlo. 1 = mayor compromiso; 5 = mejor estado.",13,false);
         LinearLayout choices=card("Resultados NOC propuestos");
         JSONObject outcomes=map(p,"nocs");
-        for(String name:strings(d.optJSONArray("noc"))) check(choices,name,outcomes.has(name),checked -> {
+        for(String name:repo.conditionNocOptions(p.optString("conditionId"))) check(choices,name,outcomes.has(name),checked -> {
             if(checked){put(outcomes,name,repo.newOutcome(name));render(true);}
             else confirm("Retirar resultado","Se borrarán los niveles seleccionados para este NOC.",() -> {outcomes.remove(name);render(true);});
         });
@@ -340,9 +356,9 @@ public final class MainActivity extends Activity {
             text(box,repo.goal(r),15,true);
         }
         LinearLayout nics=card("Intervenciones NIC propuestas · selección directa");
-        text(nics,"NIC ampliados: marca únicamente las intervenciones pertinentes para este paciente. La selección sigue siendo rápida y no exige redactar actividades en esta versión.",12,false);
+        text(nics,"Banco de la patología: 20 NIC posibles. Marca únicamente las intervenciones pertinentes para este paciente.",12,false);
         JSONObject interventions=map(p,"nics");
-        for(String name:strings(d.optJSONArray("nic"))) check(nics,name,interventions.has(name),checked -> {
+        for(String name:repo.conditionNicOptions(p.optString("conditionId"))) check(nics,name,interventions.has(name),checked -> {
             if(checked){put(interventions,name,newIntervention());}
             else interventions.remove(name);
         });
@@ -389,7 +405,7 @@ public final class MainActivity extends Activity {
         JSONObject plans=map(state,"plans");
         LinearLayout header=card("Resumen práctico del PAE");
         text(header,plans.length()+" diagnóstico(s) de enfermería seleccionado(s)",20,true);
-        text(header,"Cada NOC muestra solo dos datos: nivel al recibir y nivel esperado. Los NIC se muestran como intervenciones seleccionadas.",13,false);
+        text(header,"Informe final: datos del paciente, PES completo, NOC con nivel de ingreso/meta y NIC seleccionados. Puedes descargarlo como PDF institucional.",13,false);
         for(String id:keys(plans)) {
             JSONObject p=plans.optJSONObject(id);
             LinearLayout box=card(repo.diagnosis(id).optString("label"));
@@ -425,12 +441,12 @@ public final class MainActivity extends Activity {
             for(int i=0;i<ds.length();i++)if(id.equals(ds.optJSONObject(i).optString("id")))member=true;
             if(!member)throw new IllegalArgumentException("Diagnóstico ajeno a la condición");
             for(String name:keys(map(p,"nocs"))) {
-                if(!strings(d.optJSONArray("noc")).contains(name))throw new IllegalArgumentException("Resultado no compatible");
+                if(!repo.conditionNocOptions(p.optString("conditionId")).contains(name))throw new IllegalArgumentException("Resultado no compatible");
                 JSONObject r=map(p,"nocs").optJSONObject(name);
                 if(r==null||r.optInt("levels")!=5||!repo.catalog.optJSONObject("outcomes").optJSONObject(name).optString("profile").equals(r.optString("profile")))throw new IllegalArgumentException("Escala no compatible");
                 for(String k:Arrays.asList("baseline","target","actual"))if(r.optInt(k,-1)<0||r.optInt(k)>5)throw new IllegalArgumentException("Puntuación inválida");
             }
-            for(String name:keys(map(p,"nics")))if(!strings(d.optJSONArray("nic")).contains(name))throw new IllegalArgumentException("Intervención no compatible");
+            for(String name:keys(map(p,"nics")))if(!repo.conditionNicOptions(p.optString("conditionId")).contains(name))throw new IllegalArgumentException("Intervención no compatible");
         }
     }
     private void loadDraft() {
@@ -456,10 +472,50 @@ public final class MainActivity extends Activity {
         }
         return lines;
     }
+    private List<String> pdfReportLines() {
+        List<String> lines = new ArrayList<>();
+        lines.add("[H1]PLAN DE CUIDADOS DE ENFERMERÍA · GENFER");
+        lines.add("[TXT]Paciente: " + (state.optString("patientName").isEmpty() ? "Sin registrar" : state.optString("patientName")));
+        lines.add("[TXT]Identificación: " + (state.optString("patientId").isEmpty() ? "Sin registrar" : state.optString("patientId")));
+        lines.add("[TXT]Fecha: " + state.optString("date") + "    Turno: " + state.optString("shift"));
+        lines.add("[SEP]");
+        JSONObject plans = map(state, "plans");
+        int number = 1;
+        for (String id : keys(plans)) {
+            JSONObject p = plans.optJSONObject(id);
+            JSONObject c = repo.condition(p.optString("conditionId"));
+            lines.add("[H2]" + number + ". " + repo.diagnosis(id).optString("label"));
+            lines.add("[TXT]Servicio / área: " + c.optString("service"));
+            lines.add("[TXT]Diagnóstico médico asociado: " + c.optString("label"));
+            lines.add("[TXT]Prioridad: " + p.optString("priority"));
+            lines.add("[PES]PES: " + repo.formulation(p));
+            if (!p.optString("note").isEmpty()) lines.add("[TXT]Observación: " + p.optString("note"));
+            lines.add("[H3]Resultados NOC seleccionados");
+            if (map(p, "nocs").length() == 0) lines.add("[TXT]Sin NOC seleccionados.");
+            for (String name : keys(map(p, "nocs"))) {
+                JSONObject r = map(p, "nocs").optJSONObject(name);
+                lines.add("[NOC]" + name + " | Recibo: " + repo.scoreText(r, "baseline") + " | Meta: " + repo.scoreText(r, "target"));
+            }
+            lines.add("[H3]Intervenciones NIC seleccionadas");
+            if (map(p, "nics").length() == 0) lines.add("[TXT]Sin NIC seleccionados.");
+            for (String name : keys(map(p, "nics"))) lines.add("[NIC]• " + name);
+            lines.add("[SEP]");
+            number++;
+        }
+        lines.add("[NOTE]Documento generado por GENFER. Prototipo para validación institucional. No sustituye el juicio clínico ni las taxonomías licenciadas vigentes.");
+        return lines;
+    }
     private byte[] buildPdf() throws Exception {
         PdfDocument document = new PdfDocument();
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        List<String> lines = wrapPdf(repo.summary(state), 86);
+        List<String> source = pdfReportLines();
+        List<String> lines = new ArrayList<>();
+        for (String tagged : source) {
+            String tag = tagged.startsWith("[") ? tagged.substring(0, tagged.indexOf(']') + 1) : "[TXT]";
+            String body = tagged.startsWith("[") ? tagged.substring(tag.length()) : tagged;
+            int max = tag.equals("[H1]") || tag.equals("[H2]") ? 68 : 84;
+            for (String wrapped : wrapPdf(body, max)) lines.add(tag + wrapped);
+        }
         int index = 0, pageNo = 1;
         Bitmap genfer = BitmapFactory.decodeResource(getResources(), R.drawable.logo_genfer);
         Bitmap hudn = BitmapFactory.decodeResource(getResources(), R.drawable.logo_hudn);
@@ -468,41 +524,40 @@ public final class MainActivity extends Activity {
             PdfDocument.Page page = document.startPage(info);
             Canvas canvas = page.getCanvas();
             Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            paint.setColor(Color.WHITE); canvas.drawRect(0,0,595,842,paint);
             paint.setColor(INK);
-            if (genfer != null) canvas.drawBitmap(genfer, null, new Rect(34, 24, 112, 102), paint);
-            if (hudn != null) canvas.drawBitmap(hudn, null, new Rect(392, 36, 558, 88), paint);
-            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-            paint.setTextSize(15);
-            canvas.drawText("GENFER · Plan de Cuidados de Enfermería", 128, 52, paint);
-            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
-            paint.setTextSize(9);
-            canvas.drawText("Hospital Universitario Departamental de Nariño · Prototipo para validación institucional", 128, 70, paint);
-            paint.setColor(TEAL);
-            canvas.drawRect(34, 112, 561, 116, paint);
-            paint.setColor(INK);
-            int y = 140;
-            paint.setTextSize(10);
-            int maxLines = 50;
-            int used = 0;
-            while (index < lines.size() && used < maxLines) {
-                String line = lines.get(index++);
-                boolean heading = line.startsWith("DIAGNÓSTICO DE ENFERMERÍA:") || line.startsWith("NOC:") || line.startsWith("NIC seleccionados:");
-                paint.setTypeface(Typeface.create(Typeface.DEFAULT, heading ? Typeface.BOLD : Typeface.NORMAL));
-                if (line.isEmpty()) y += 7;
-                else { canvas.drawText(line, 40, y, paint); y += 13; }
-                used++;
+            if (genfer != null) canvas.drawBitmap(genfer, null, new Rect(32, 20, 104, 92), paint);
+            if (hudn != null) canvas.drawBitmap(hudn, null, new Rect(410, 30, 560, 82), paint);
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD)); paint.setTextSize(14);
+            canvas.drawText("GENFER · Modelo de Atención de Enfermería", 118, 45, paint);
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL)); paint.setTextSize(9);
+            canvas.drawText("Hospital Universitario Departamental de Nariño", 118, 62, paint);
+            paint.setColor(TEAL); canvas.drawRect(32, 105, 563, 110, paint);
+            int y = 132;
+            while (index < lines.size() && y < 790) {
+                String tagged = lines.get(index);
+                String tag = tagged.substring(0, tagged.indexOf(']') + 1);
+                String body = tagged.substring(tag.length());
+                if (tag.equals("[SEP]")) {
+                    paint.setColor(0xFFD9E8E3); canvas.drawRect(40,y,555,y+1,paint); y += 14; index++; continue;
+                }
+                if (tag.equals("[H1]")) { paint.setColor(TEAL); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD)); paint.setTextSize(15); y += 4; }
+                else if (tag.equals("[H2]")) { paint.setColor(0xFF0B5FC6); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD)); paint.setTextSize(12); y += 7; }
+                else if (tag.equals("[H3]")) { paint.setColor(TEAL); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD)); paint.setTextSize(10); y += 4; }
+                else if (tag.equals("[PES]")) { paint.setColor(INK); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD)); paint.setTextSize(10); }
+                else if (tag.equals("[NOC]")) { paint.setColor(0xFF164D3F); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.NORMAL)); paint.setTextSize(9); }
+                else if (tag.equals("[NIC]")) { paint.setColor(0xFF234D58); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.NORMAL)); paint.setTextSize(9); }
+                else if (tag.equals("[NOTE]")) { paint.setColor(0xFF657773); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.ITALIC)); paint.setTextSize(8); }
+                else { paint.setColor(INK); paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.NORMAL)); paint.setTextSize(9); }
+                canvas.drawText(body, tag.equals("[NIC]") ? 50 : 40, y, paint);
+                y += tag.equals("[H1]") ? 20 : tag.equals("[H2]") ? 18 : 13;
+                index++;
             }
-            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL));
-            paint.setTextSize(8);
-            paint.setColor(0xFF657773);
-            canvas.drawText("Página " + pageNo + " · GENFER 3.1", 470, 818, paint);
-            document.finishPage(page);
-            pageNo++;
-            if (lines.isEmpty()) break;
+            paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.NORMAL)); paint.setTextSize(8); paint.setColor(0xFF657773);
+            canvas.drawText("GENFER 3.2 · Página " + pageNo, 455, 818, paint);
+            document.finishPage(page); pageNo++;
         }
-        document.writeTo(bytes);
-        document.close();
-        return bytes.toByteArray();
+        document.writeTo(bytes); document.close(); return bytes.toByteArray();
     }
     private void exportPdf() {
         try {
